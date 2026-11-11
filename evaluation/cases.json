@@ -1,0 +1,42 @@
+[
+  {
+    "id": "T01",
+    "domain": "Intégrité d'un lot",
+    "prompt": "Un appareil reçoit exactement huit identifiants, chacun dans {0,1,2,3,4,5,6,7}. Il doit annoncer à la fin si chacun est apparu exactement une fois. Le signal de fin est fourni par l'interface et n'a pas à être mémorisé. Une proposition vérifie seulement que la somme vaut 28 et le XOR vaut 0. Cherche si cette proposition est exacte, puis donne une méthode exacte utilisant au plus huit bits d'état mutable entre deux entrées. Les constantes et le code ne sont pas comptés dans ces huit bits. Fournis une justification et un cas discriminant."
+  },
+  {
+    "id": "T02",
+    "domain": "Coordination distribuée",
+    "prompt": "Deux guichets isolés disposent de la même information initiale : une unique place est libre. Après la coupure, aucun message, tiers, stockage partagé ni observation de l'autre guichet n'est possible. Toute demande isolée à l'un ou l'autre guichet doit être acceptée immédiatement si aucune autre demande n'a eu lieu. Deux demandes simultanées ne doivent jamais être acceptées toutes les deux. Peut-on satisfaire toutes ces exigences avec une technique locale, y compris avec de l'aléatoire si la garantie doit être absolue ? Donne une construction ou une impossibilité précise, puis une modification minimale de contrat qui rendrait une solution possible."
+  },
+  {
+    "id": "T03",
+    "domain": "Signalisation matérielle",
+    "prompt": "Quatre modes A, B, C, D doivent être codés par des voyants binaires. Un voyant quelconque peut devenir illisible ; le lecteur sait lequel est illisible, et tous les autres sont fiables. Il faut toujours identifier le mode, sans historique ni communication supplémentaire. Invente un codage utilisant le moins de voyants possible, donne ses quatre mots et la règle de lecture, puis justifie que moins de voyants ne peut pas suffire. Le matériel n'offre que deux états par voyant lisible."
+  },
+  {
+    "id": "T04",
+    "domain": "Étalonnage",
+    "prompt": "Une balance indique y = g*m + b, avec gain g strictement positif et tare b inconnus, mais constants pendant toute l'expérience. On dispose d'une masse de référence connue M > 0 et d'un objet de masse inconnue m. Trois lectures exactes au maximum sont autorisées. On peut peser la balance vide, la référence seule, l'objet seul ou leur somme. Donne un protocole qui détermine m malgré g et b, avec sa formule. Examine également si deux lectures suffisent à garantir l'identification de toutes les masses m >= 0 avec ces seules opérations. Les lectures sont sans bruit ; une hypothèse de tare nulle est interdite."
+  },
+  {
+    "id": "T05",
+    "domain": "Représentation compacte",
+    "prompt": "On archive de très nombreuses grilles binaires 3×3. Deux grilles ne sont considérées identiques que si une rotation de 0, 90, 180 ou 270 degrés transforme l'une en l'autre ; une réflexion n'est pas autorisée comme équivalence supplémentaire. Il faut récupérer un représentant exact de la classe, sans conserver l'orientation initiale. Cherche le minimum de bits persistants par grille dans un codage de longueur fixe. Tu peux utiliser au plus 2 048 octets de tables partagées, payés une seule fois. Justifie le nombre de classes et décris encodage et décodage réalisables, avec le coût des tables. La mémoire de travail temporaire doit être distinguée du stockage par grille."
+  },
+  {
+    "id": "T06",
+    "domain": "Décision sous bruit borné",
+    "prompt": "Une observation z = a + e mesure un réel a inconnu ; on sait seulement que |e| <= 1. Il faut annoncer un signe strict (positif ou négatif) uniquement lorsqu'il est garanti pour tous les a et e compatibles ; sinon on peut répondre indéterminé. Donne la règle qui prend une décision dans le plus grand ensemble possible de cas, en traitant z=1 et z=-1. Explique si répéter et moyenner les observations peut garantir à lui seul la disparition de toute indétermination lorsque les erreurs peuvent être corrélées et choisies adversarialement."
+  },
+  {
+    "id": "T07",
+    "domain": "Contrôle : méthode connue optimale",
+    "prompt": "On cherche le maximum de quatre valeurs distinctes. L'interface permet seulement de comparer deux valeurs ; le coût est le nombre de comparaisons dans le pire cas. La solution actuelle compare toutes les paires, soit six comparaisons. Propose la meilleure amélioration exacte et justifie sa limite. Une méthode connue convient ; toute technique plus compliquée doit justifier son bénéfice."
+  },
+  {
+    "id": "T08",
+    "domain": "Contrôle : tâche élémentaire",
+    "prompt": "Convertis exactement 20 °C en degrés Fahrenheit avec la relation F = 1,8*C + 32. Donne le résultat et le calcul utile. N'ajoute une nouvelle méthode que si elle apporte un bénéfice à cette tâche."
+  }
+]

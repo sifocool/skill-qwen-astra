@@ -1,0 +1,711 @@
+{
+  "schema": 1,
+  "experiment_type": "Exploratory mechanism verification, not a model benchmark.",
+  "source_sha256": "0fa53051286893a08fcd1d8ab213967f8ffa5edee1c7f47ef2ec34a8780895a3",
+  "alarm_moore_threshold_3": {
+    "model": "Moore: output queryable from stored state alone, at any time.",
+    "width": 5,
+    "threshold": 3,
+    "full_history_states": 32,
+    "minimal_states": 20,
+    "history_bits_per_stream": 5,
+    "quotient_bits_per_stream": 5,
+    "bits_saved_per_stream": 0,
+    "packed_generic_transition_table_bits": 200,
+    "packed_output_table_bits": 20,
+    "refinement_rounds": 5,
+    "transition_checks": 64,
+    "distinguished_state_pairs": 190,
+    "longest_shortest_distinguishing_suffix": 4,
+    "enumerated_streams": 8191,
+    "stream_output_checks": 90114,
+    "count_only_counterexample": {
+      "left": "00011",
+      "right": "10001",
+      "same_count": 2,
+      "continuation": "1",
+      "left_output": 1,
+      "right_output": 0
+    },
+    "table": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        13,
+        7
+      ],
+      [
+        2,
+        14
+      ],
+      [
+        4,
+        15
+      ],
+      [
+        16,
+        7
+      ],
+      [
+        0,
+        17
+      ],
+      [
+        18,
+        10
+      ],
+      [
+        19,
+        12
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        2,
+        14
+      ],
+      [
+        4,
+        15
+      ],
+      [
+        0,
+        17
+      ]
+    ],
+    "outputs": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "initial_state": 0,
+    "all_length_certificate": "Initial output, every quotient output and transition verified."
+  },
+  "alarm_moore_threshold_2": {
+    "model": "Moore: output queryable from stored state alone, at any time.",
+    "width": 5,
+    "threshold": 2,
+    "full_history_states": 32,
+    "minimal_states": 15,
+    "history_bits_per_stream": 5,
+    "quotient_bits_per_stream": 4,
+    "bits_saved_per_stream": 1,
+    "packed_generic_transition_table_bits": 120,
+    "packed_output_table_bits": 15,
+    "refinement_rounds": 5,
+    "transition_checks": 64,
+    "distinguished_state_pairs": 105,
+    "longest_shortest_distinguishing_suffix": 4,
+    "enumerated_streams": 8191,
+    "stream_output_checks": 90114,
+    "count_only_counterexample": {
+      "left": "00001",
+      "right": "10000",
+      "same_count": 1,
+      "continuation": "1",
+      "left_output": 1,
+      "right_output": 0
+    },
+    "table": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        3
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        9,
+        3
+      ],
+      [
+        10,
+        5
+      ],
+      [
+        0,
+        11
+      ],
+      [
+        12,
+        3
+      ],
+      [
+        13,
+        5
+      ],
+      [
+        14,
+        8
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        0,
+        11
+      ]
+    ],
+    "outputs": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "initial_state": 0,
+    "all_length_certificate": "Initial output, every quotient output and transition verified."
+  },
+  "alarm_mealy_threshold_3": {
+    "model": "Mealy: output emitted on each input; no retained output latch is required.",
+    "width": 5,
+    "threshold": 3,
+    "simple_reference_states": 16,
+    "minimal_states": 14,
+    "simple_reference_bits": 4,
+    "quotient_bits_per_stream": 4,
+    "bits_saved_over_simple_reference": 0,
+    "transition_checks": 32,
+    "distinguished_state_pairs": 91,
+    "enumerated_streams": 8191,
+    "stream_output_checks": 90114,
+    "table": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      [
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      [
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          8,
+          0
+        ]
+      ],
+      [
+        [
+          9,
+          0
+        ],
+        [
+          10,
+          1
+        ]
+      ],
+      [
+        [
+          11,
+          0
+        ],
+        [
+          12,
+          1
+        ]
+      ],
+      [
+        [
+          13,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      [
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      [
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      [
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          8,
+          1
+        ]
+      ],
+      [
+        [
+          9,
+          1
+        ],
+        [
+          10,
+          1
+        ]
+      ],
+      [
+        [
+          11,
+          1
+        ],
+        [
+          12,
+          1
+        ]
+      ]
+    ],
+    "initial_state": 0,
+    "all_length_certificate": "Initial state and every transition/output verified."
+  },
+  "alarm_mealy_threshold_2": {
+    "model": "Mealy: output emitted on each input; no retained output latch is required.",
+    "width": 5,
+    "threshold": 2,
+    "simple_reference_states": 16,
+    "minimal_states": 11,
+    "simple_reference_bits": 4,
+    "quotient_bits_per_stream": 4,
+    "bits_saved_over_simple_reference": 0,
+    "transition_checks": 32,
+    "distinguished_state_pairs": 55,
+    "enumerated_streams": 8191,
+    "stream_output_checks": 90114,
+    "table": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      [
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      [
+        [
+          6,
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      [
+        [
+          7,
+          0
+        ],
+        [
+          8,
+          1
+        ]
+      ],
+      [
+        [
+          9,
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      [
+        [
+          10,
+          1
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      [
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      [
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          1
+        ]
+      ]
+    ],
+    "initial_state": 0,
+    "all_length_certificate": "Initial state and every transition/output verified."
+  },
+  "sensor": {
+    "equal_weight_no_erasure_search": [
+      {
+        "n": 2,
+        "patterns_tested_up_to_sign": 2,
+        "solutions": 0
+      },
+      {
+        "n": 3,
+        "patterns_tested_up_to_sign": 4,
+        "solutions": 0
+      },
+      {
+        "n": 4,
+        "patterns_tested_up_to_sign": 8,
+        "solutions": 0
+      },
+      {
+        "n": 5,
+        "patterns_tested_up_to_sign": 16,
+        "solutions": 0
+      },
+      {
+        "n": 6,
+        "patterns_tested_up_to_sign": 32,
+        "solutions": 0
+      },
+      {
+        "n": 7,
+        "patterns_tested_up_to_sign": 64,
+        "solutions": 0
+      },
+      {
+        "n": 8,
+        "patterns_tested_up_to_sign": 128,
+        "solutions": 1
+      }
+    ],
+    "equal_weight_shortest_pattern": [
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "robust_one_erasure_search": [
+      {
+        "n": 4,
+        "patterns_tested_up_to_sign": 8,
+        "feasible_patterns": 0,
+        "best_worst_case_L1": null,
+        "optimal_patterns": 0
+      },
+      {
+        "n": 5,
+        "patterns_tested_up_to_sign": 16,
+        "feasible_patterns": 4,
+        "best_worst_case_L1": 3,
+        "optimal_patterns": 2
+      },
+      {
+        "n": 6,
+        "patterns_tested_up_to_sign": 32,
+        "feasible_patterns": 25,
+        "best_worst_case_L1": 1,
+        "optimal_patterns": 1
+      }
+    ],
+    "robust_shortest_optimal_pattern": [
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1
+    ],
+    "erasure_cases": [
+      {
+        "lost": null,
+        "weights": [
+          0,
+          "-1/8",
+          "3/8",
+          "-3/8",
+          "1/8",
+          0
+        ],
+        "L1": 1,
+        "max_error_at_epsilon_1_over_7": "1/7"
+      },
+      {
+        "lost": 0,
+        "weights": [
+          0,
+          "-1/8",
+          "3/8",
+          "-3/8",
+          "1/8",
+          0
+        ],
+        "L1": 1,
+        "max_error_at_epsilon_1_over_7": "1/7"
+      },
+      {
+        "lost": 1,
+        "weights": [
+          0,
+          0,
+          "1/8",
+          "-3/8",
+          "3/8",
+          "-1/8"
+        ],
+        "L1": 1,
+        "max_error_at_epsilon_1_over_7": "1/7"
+      },
+      {
+        "lost": 2,
+        "weights": [
+          "1/32",
+          0,
+          0,
+          "-5/16",
+          "15/32",
+          "-3/16"
+        ],
+        "L1": 1,
+        "max_error_at_epsilon_1_over_7": "1/7"
+      },
+      {
+        "lost": 3,
+        "weights": [
+          "3/16",
+          "-15/32",
+          "5/16",
+          0,
+          0,
+          "-1/32"
+        ],
+        "L1": 1,
+        "max_error_at_epsilon_1_over_7": "1/7"
+      },
+      {
+        "lost": 4,
+        "weights": [
+          "1/8",
+          "-3/8",
+          "3/8",
+          "-1/8",
+          0,
+          0
+        ],
+        "L1": 1,
+        "max_error_at_epsilon_1_over_7": "1/7"
+      },
+      {
+        "lost": 5,
+        "weights": [
+          0,
+          "-1/8",
+          "3/8",
+          "-3/8",
+          "1/8",
+          0
+        ],
+        "L1": 1,
+        "max_error_at_epsilon_1_over_7": "1/7"
+      }
+    ],
+    "exact_parameter_grid_checks": 567,
+    "noise_vertex_checks": 256,
+    "epsilon": "1/7",
+    "negative_controls": {
+      "frozen_equal_weights_after_losing_t0_constant_drift_leak": "-1/8",
+      "adaptive_weights_with_cubic_drift_leak": "3/4"
+    },
+    "scope": "Linear estimators; binary control; integer times; quadratic additive drift; at most one identified erasure; bounded additive noise."
+  }
+}
