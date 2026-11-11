@@ -1,5 +1,10 @@
 # Une méthode d'invention à transmettre à Qwen 27B
 
+**Révision expérimentale v2 :** un [premier essai utilisateur](evaluation/pilot-2026-11-11.md)
+rapporte six réponses terminées sur huit avec le skill, contre huit sans skill
+(dont une avec une erreur de coût). La v2 allège le protocole et rend la recherche
+conditionnelle à un obstacle. Elle n'a pas encore été évaluée sur Qwen.
+
 Le livrable est [SKILL.md](SKILL.md) : un protocole compact pour concevoir une
 technique, identifier ce qui la rend utile et essayer de la réfuter. Il est
 rédigé en français, utilisable dans un agent qui charge des skills ou comme
@@ -36,8 +41,8 @@ sont décrites dans [l'atelier](references/atelier.md).
   YAML, avant le problème. Les fichiers de référence sont facultatifs ; coller
   seulement les passages pertinents si l'interface ne sait pas les lire.
 - **Budget court :** demander une proposition et son test décisif. Le skill
-  prévoit au plus trois candidats et deux réparations par défaut, paramètres à
-  ajuster selon les résultats ; leur optimalité pour Qwen n'est pas établie.
+  travaille sur un candidat et une réparation ciblée par défaut ; leur
+  efficacité pour Qwen reste à mesurer.
 
 Exemple de demande :
 
@@ -66,10 +71,11 @@ prépare les requêtes pour une comparaison sur huit tâches, sans appeler de
 modèle ni transmettre de données. Le [protocole d'évaluation](evaluation/PROTOCOL.md)
 décrit les contrôles et la notation.
 
-**État du transfert :** skill rédigé, constructions vérifiées localement,
-évaluation sur Qwen non exécutée. Aucun résultat d'amélioration de Qwen n'est
-revendiqué. Le modèle exact et un accès à son exécution restent nécessaires pour
-mesurer ce gain.
+**État du transfert :** constructions vérifiées localement, premier essai rapporté
+par l'utilisateur, v2 non évaluée. Aucun gain d'invention chez Qwen n'est établi.
+La [v1 conservée](evaluation/versions/skill-v1.md) permet une comparaison ;
+`evaluation/prepare.py --skill evaluation/versions/skill-v1.md --output /tmp/astra-v1`
+prépare ses requêtes sans appeler de modèle.
 
 Cette recherche porte sur des procédures observables de génération et de
 vérification. Elle ne donne pas accès aux mécanismes internes du modèle. Les

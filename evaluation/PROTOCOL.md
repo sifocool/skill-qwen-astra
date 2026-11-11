@@ -1,6 +1,7 @@
 # Mesurer le transfert vers Qwen 27B
 
-**Statut : protocole préparé, aucun essai Qwen réalisé.** Les expériences de
+**Statut : un [essai utilisateur](pilot-2026-11-11.md) a été rapporté ; la v2 reste
+à évaluer. Aucun appel Qwen n'a été exécuté par l'agent.** Les expériences de
 `../experiments/` testent des constructions, pas un gain causal du skill.
 
 ## Comparaison proposée

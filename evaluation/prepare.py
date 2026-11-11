@@ -14,9 +14,10 @@ def digest(data):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--skill", type=Path, help="Optional skill version to evaluate")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
-    skill_source = (root / "SKILL.md").read_text()
+    skill_source = (args.skill or root / "SKILL.md").read_text()
     if not skill_source.startswith("---\n"):
         raise ValueError("Missing skill front matter")
     skill = skill_source.split("---\n", 2)[2].strip()
