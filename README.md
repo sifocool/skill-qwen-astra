@@ -1,6 +1,6 @@
 # Une méthode d'invention à transmettre à Qwen 27B
 
-**Révision expérimentale v2 :** un [premier essai utilisateur](evaluation/pilot-2026-11-11.md)
+**Révision expérimentale v2 :** un [premier essai](evaluation/pilot-2026-11-11.md)
 rapporte six réponses terminées sur huit avec le skill, contre huit sans skill
 (dont une avec une erreur de coût). La v2 allège le protocole et rend la recherche
 conditionnelle à un obstacle. Elle n'a pas encore été évaluée sur Qwen.
