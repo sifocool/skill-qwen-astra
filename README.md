@@ -72,7 +72,7 @@ modèle ni transmettre de données. Le [protocole d'évaluation](evaluation/PROT
 décrit les contrôles et la notation.
 
 **État du transfert :** constructions vérifiées localement, premier essai rapporté
-par l'utilisateur, v2 non évaluée. Aucun gain d'invention chez Qwen n'est établi.
+, v2 non évaluée. Aucun gain d'invention chez Qwen n'est établi.
 La [v1 conservée](evaluation/versions/skill-v1.md) permet une comparaison ;
 `evaluation/prepare.py --skill evaluation/versions/skill-v1.md --output /tmp/astra-v1`
 prépare ses requêtes sans appeler de modèle.
