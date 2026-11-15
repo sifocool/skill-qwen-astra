@@ -1,0 +1,43 @@
+{
+  "status": "PARTIAL",
+  "cli_version": "2.1.283 (Claude Code)",
+  "cli_sha256": "4a71f51e9ebe7df460b86f7a05c6fa15ae90e4665b5a0de35b9b3e26348316bb",
+  "exit_code": 1,
+  "events": {
+    "UserPromptSubmit": 1
+  },
+  "tools": [],
+  "final_state": "ACTIVE",
+  "results": [
+    {
+      "type": "result",
+      "subtype": "success",
+      "is_error": true,
+      "result": "API Error: 400 reasoning effort 'high' is not supported by the loaded chat template",
+      "usage": {
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "",
+        "iterations": [],
+        "speed": "standard"
+      },
+      "num_turns": 1
+    }
+  ],
+  "stderr_excerpt": "[claude-code:unrecognized_model] {\"model\":\"qwen3.8-27b\",\"query_source\":\"sdk\"}\n",
+  "profile": "disposable explicit settings; installed hook runtime"
+}

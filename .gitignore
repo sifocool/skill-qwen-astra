@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+.astra/
+*.sqlite
+*.sqlite-journal

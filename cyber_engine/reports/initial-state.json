@@ -1,0 +1,12 @@
+{
+  "base_commit": "822a9fc211ba34bea3d71d463ef5e8f0107c9897",
+  "profile_skills": {
+    "blackbox-recon": "587d535fd63612160e85fbb5904af4b88c528b975ae62b2f826c0cbc0bb2e644",
+    "patch-diffing": "96b53b0c3fa5861d058409b4c8ca6301f53ba1db4cacceb35e68c6ab04cfb7a6",
+    "fuzz-crash-triage": "51d4834380a1589a250c26bd66cbe63152e387f357a63cc37aa6330fddb950f0",
+    "gadget-deserialization": "c9c724a20f08609187f41485eeb722f810726789b6d03ca91a201667b71b2565"
+  },
+  "model_reported": "qwen3.8-27b",
+  "karvan_interface": "KnowledgeStore.admit",
+  "cybergym": "BLOCKED: Docker runtime absent; no benchmark data installed"
+}
