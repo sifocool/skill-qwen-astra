@@ -47,6 +47,9 @@ Les contrôles vérifient une structure de preuve, pas la signification de toute
 phrase libre : la pertinence d'un oracle, d'un contrôle et des hypothèses doit être
 revue. Un label choisi par un harness ne démontre pas à lui seul une vulnérabilité.
 
+Une base sans ligne d'état ne déclenche aucun hook. Le routage en lecture seule
+ne crée pas de base ; seul `init` démarre une investigation avec un périmètre.
+
 ## Périmètre et données
 
 Les adaptateurs vérifient racines réelles (symlinks résolus), noms d'adaptateurs et
@@ -66,6 +69,17 @@ préserve ses entrées et tous les hooks de compactage.
 ## Installation et retour arrière
 
 `python3 -m cyber_engine.install --profile /chemin/config --python /chemin/python3`
+
+Si les outils natifs sont installés hors PATH, ajouter `--toolchain outils.json` :
+
+```json
+{"radare2":"/chemin/bin/r2","ghidra":"/chemin/ghidra/support/analyzeHeadless"}
+```
+
+Le lanceur `config/astra-runtime/run.py` rend ces exécutables disponibles au seul
+processus du moteur. Les liaisons déjà installées sont conservées si l'option
+est omise. Elles ne remplacent pas l'autorisation d'un adaptateur dans le périmètre.
+Les versions et exécutions vérifiées figurent dans le [rapport](../reports/REPORT.md).
 
 L'installation ajoute le runtime et les skills, sauvegarde les fichiers remplacés
 dans `config/backups/astra-v2-*`, et ajoute cinq événements de hooks sans écraser

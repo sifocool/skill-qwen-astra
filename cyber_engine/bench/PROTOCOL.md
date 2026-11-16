@@ -13,7 +13,7 @@ par génération, 120 s par requête, 600 s par tâche, arrêt à 50000 tokens r
 plafond est contrôlé entre appels, pas pendant le prefill. Aucune relance silencieuse.
 
 Baseline : instructions d'interface uniquement. Enhanced : mêmes instructions,
-orchestrateur et skill de domaine chargé selon la famille, registre Engine,
+orchestrateur et skill de domaine chargé selon le texte visible du contrat, registre Engine,
 hooks avant/après actions et contrôles de conclusion. Les quatre skills sont
 disponibles dans le système, avec chargement progressif de celui pertinent.
 Cette comparaison porte sur le paquet complet, pas sur l'effet isolé d'un hook.

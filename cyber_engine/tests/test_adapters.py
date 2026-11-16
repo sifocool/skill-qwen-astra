@@ -76,7 +76,8 @@ class AdapterTests(unittest.TestCase):
         self.assertEqual(r['status'],'PASS',r)
         self.assertEqual(r['label'],'sanitizer_error',r)
         p=self.write('good.c','int main(void){return 0;}\n')
-        self.assertEqual(self.call('sanitizer',path=p)['label'],'clean')
+        r=self.call('sanitizer',path=p)
+        self.assertEqual(r['label'],'clean',r)
 
     def test_protocol_role_and_state_violation(self):
         p=self.write('proto.py','import sys,json\na=json.load(sys.stdin)\nprint(json.dumps(["ok" if x=="login" else "denied" for x in a]))\n')
@@ -84,6 +85,13 @@ class AdapterTests(unittest.TestCase):
         self.assertEqual(r['label'],'transitions_valid')
         r=self.call('protocol',script=p,traces=[dict(steps=['read'],expected=['ok'])])
         self.assertEqual(r['mismatches'],[0])
+
+    def test_sanitizer_timeout_is_not_reported_as_crash(self):
+        if not shutil.which('clang'):self.skipTest('BLOCKED clang absent')
+        p=self.write('hang.c','int main(void){for(;;){__asm__ volatile("");}}\n')
+        r=self.call('sanitizer',path=p,timeout=.1)
+        self.assertTrue(r['timeout'],r)
+        self.assertEqual(r['label'],'timeout',r)
 
     def test_deserialization_actual_harmless_callback(self):
         p=self.write('callbacks.py','import pickle\nseen=[]\nclass Record:\n def __setstate__(self,state):\n  seen.append("marker")\nx=Record();x.a=1\npickle.loads(pickle.dumps(x))\nassert seen==["marker"]\n')

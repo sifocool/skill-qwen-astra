@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "completion_loop_guard_ok": true,
+  "cli_version": "2.1.283 (Claude Code)",
+  "cli_sha256": "4a71f51e9ebe7df460b86f7a05c6fa15ae90e4665b5a0de35b9b3e26348316bb",
+  "exit_code": 0,
+  "events": {
+    "UserPromptSubmit": 1,
+    "PreToolUse": 2,
+    "PostToolUseFailure": 1,
+    "PostToolUse": 1,
+    "Stop": 1
+  },
+  "tools": [
+    "Read",
+    "Read"
+  ],
+  "final_state": "PARTIAL",
+  "results": [
+    {
+      "type": "result",
+      "subtype": "success",
+      "is_error": false,
+      "result": "PARTIAL: hook test",
+      "usage": {
+        "input_tokens": 2390,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 384,
+        "output_tokens": 233,
+        "output_tokens_details": {
+          "thinking_tokens": 85
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "",
+        "iterations": [],
+        "speed": "standard"
+      },
+      "num_turns": 3
+    }
+  ],
+  "stderr_excerpt": "[claude-code:unrecognized_model] {\"model\":\"qwen3.8-27b\",\"query_source\":\"sdk\"}\n",
+  "profile": "disposable explicit settings; installed hook runtime"
+}

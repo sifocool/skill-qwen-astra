@@ -1,0 +1,36 @@
+{
+  "radare2": {
+    "status": "PASS",
+    "version": "radare2 5.9.8 1 @ darwin-x86-64\nbirth: git.5.9.8 2026-11-15__16:37:29\ncommit: 4eb49d5ad8c99eaecc8850a2f10bad407067c898\noptions: gpl -O2 cs:5 cl:2 make",
+    "path": "/Users/apple/astra-cyber-tools/r2-install/bin/r2",
+    "scope_tools": {
+      "radare2": "/Users/apple/astra-cyber-tools/r2-install/bin/r2"
+    },
+    "source_commit": "4eb49d5ad8c99eaecc8850a2f10bad407067c898",
+    "configure": [
+      "--with-capstone5",
+      "--disable-debugger"
+    ],
+    "functional_check": "binary_metadata on a real local Mach-O executable"
+  },
+  "ghidra": {
+    "status": "PASS",
+    "version": "10.3.3",
+    "path": "/Users/apple/astra-cyber-tools/ghidra_10.3.3_PUBLIC/support/analyzeHeadless",
+    "scope_tools": {
+      "ghidra": "/Users/apple/astra-cyber-tools/ghidra_10.3.3_PUBLIC/support/analyzeHeadless"
+    },
+    "archive_sha256": "63833361bea8ef5ada1bc28cd2aa2ae4ab43204d2672b595500372582152eebe",
+    "functional_check": "headless import and analysis of locally compiled Mach-O",
+    "sandbox_note": "JVM Abort trap in restricted environment; actual analysis passed outside sandbox"
+  },
+  "cybergym": {
+    "status": "BLOCKED",
+    "reason": "Docker and benchmark data absent; no CyberGym task executed"
+  },
+  "karvan": {
+    "status": "PASS",
+    "interface": "KnowledgeStore.add_source/admit tested in disposable ledger",
+    "live_ledger_modified": false
+  }
+}

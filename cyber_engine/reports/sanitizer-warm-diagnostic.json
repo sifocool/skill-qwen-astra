@@ -1,0 +1,86 @@
+{
+  "runs": 20,
+  "successes": 20,
+  "outcomes": [
+    {
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "returncode": 0,
+      "stderr": ""
+    }
+  ]
+}

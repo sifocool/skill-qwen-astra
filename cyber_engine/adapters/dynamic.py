@@ -44,7 +44,8 @@ def run_process(argv, data=b"", timeout=3, cwd=None):
     if exception and not signature:
         signature = exception[-1]
     return dict(exit_code=p.returncode, timeout=timed_out, stdout=stdout.decode(errors="replace"),
-                stderr_sha256=hashlib.sha256(stderr).hexdigest(), signature=signature)
+                stderr_sha256=hashlib.sha256(stderr).hexdigest(), signature=signature,
+                **({"unclassified_diagnostic": diagnostic} if p.returncode and not signature else {}))
 
 
 def trusted(scope):
@@ -143,9 +144,13 @@ def sanitizer(args, scope):
         c=run_process([cc,"-g","-O1","-fsanitize=address,undefined","-fno-omit-frame-pointer",p,"-o",binary],timeout=30)
         if c["exit_code"]:
             return dict(status="BLOCKED",label="build_failed",build=c)
-        r=run_process([binary],args.get("input","").encode(),args.get("timeout",3))
-    return dict(status="PASS",label="sanitizer_error" if r["signature"] else "clean" if r["exit_code"]==0 else "unclassified_crash",
-                exit_code=r["exit_code"],signature=r["signature"],stdout=r["stdout"],timeout=r["timeout"])
+        # A newly linked instrumented binary may take several seconds to start.
+        # This is a bounded allowance, not a retry that hides failed executions.
+        r=run_process([binary],args.get("input","").encode(),args.get("timeout",10))
+    return dict(status="PASS",label="timeout" if r["timeout"] else "sanitizer_error" if r["signature"] else "clean" if r["exit_code"]==0 else "unclassified_crash",
+                exit_code=r["exit_code"],signature=r["signature"],stdout=r["stdout"],timeout=r["timeout"],
+                **({"unclassified_diagnostic": r["unclassified_diagnostic"]}
+                   if "unclassified_diagnostic" in r else {}))
 
 
 def deserialize_trace(args, scope):

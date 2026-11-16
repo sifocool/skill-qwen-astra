@@ -116,6 +116,18 @@ class EngineTests(unittest.TestCase):
             ('Check tenant roles and API states','blackbox-recon'),('Which deserialization callback runs?','gadget-deserialization')]:
             self.assertEqual(route(question)['skill'],skill)
 
+    def test_cli_read_only_actions_do_not_create_state(self):
+        path=self.root/'new-state'
+        for action,payload,expected in [('route','{"question":"parser crash"}',0),('status','{}',1)]:
+            r=subprocess.run([sys.executable,'-m','cyber_engine','--state',str(path),action,payload],capture_output=True,text=True)
+            self.assertEqual(r.returncode,expected,r.stderr)
+            self.assertFalse(path.exists())
+
+    def test_uninitialized_database_does_not_activate_hook(self):
+        with tempfile.TemporaryDirectory() as d:
+            orphan=Engine(Path(d)/'.astra/state');orphan.store.close()
+            self.assertEqual(handle(dict(cwd=d,hook_event_name='Stop',last_assistant_message='DONE')), {})
+
     def test_evidence_tampering_detected(self):
         test=self.plan('x');self.e.run(test)
         sha=self.e.store.load()['experiments'][test]['evidence'][0]

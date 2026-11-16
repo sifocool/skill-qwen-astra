@@ -20,6 +20,8 @@ def handle(payload):
     if (cwd/".astra").is_symlink() or directory.is_symlink():return {}
     engine=Engine(directory)
     try:
+        if not engine.store.db.execute('SELECT 1 FROM state WHERE id=1').fetchone():
+            return {}  # An interrupted init or read-only probe is not an active mission.
         s=engine.store.load()
         event=payload.get("hook_event_name")
         if event not in ("UserPromptSubmit","PreToolUse","PostToolUse","PostToolUseFailure","Stop"):return {}

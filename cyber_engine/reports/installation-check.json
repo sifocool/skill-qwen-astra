@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "settings_unchanged_except_added_hooks": true,
+  "original_hooks_preserved": true,
+  "no_duplicate_astra_hooks": true,
+  "settings_sha256": "760fc23de697e957d791da5f90eb832b29066485d8defcfd529b13af29f08394",
+  "backup": "/Users/apple/.qwen-claude-code/config/backups/astra-v2-20261116-084926-0f1555",
+  "toolchain": {
+    "radare2": "/Users/apple/astra-cyber-tools/r2-install/bin/radare2",
+    "ghidra": "/Users/apple/astra-cyber-tools/ghidra_10.3.3_PUBLIC/support/analyzeHeadless"
+  },
+  "deployed_files_identical_to_source": 48
+}

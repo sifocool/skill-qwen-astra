@@ -11,6 +11,15 @@ from cyber_engine.tests import test_engine
 
 
 class InstallTests(unittest.TestCase):
+    def test_tool_bindings_preserved_and_read_only_launcher_has_no_state(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d);(p/'settings.json').write_text('{}')
+            first=install(p,tools={'radare2':sys.executable});second=install(p)
+            self.assertEqual(first['toolchain'],second['toolchain'])
+            workspace=p/'workspace';workspace.mkdir()
+            r=subprocess.run([sys.executable,str(p/'astra-runtime/run.py'),'route','{"question":"parser crash"}'],cwd=workspace,capture_output=True,text=True)
+            self.assertEqual(r.returncode,0,r.stderr);self.assertFalse((workspace/'.astra').exists())
+
     def test_preserves_settings_hooks_idempotent_and_installed_execution(self):
         with tempfile.TemporaryDirectory() as d:
             p=Path(d);old=dict(env={'PRIVATE_TOKEN':'not-real'},hooks={'Stop':[{'hooks':[{'type':'command','command':'true'}]}]})

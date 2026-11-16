@@ -5,6 +5,13 @@ d'expériences, quatre compétences spécialisées, adaptateurs exécutables et 
 de contrôle. **L'efficacité du paquet doit être lue dans les résultats mesurés ;
 son architecture seule ne démontre aucun gain de résolution.**
 
+**Résultat mesuré : PARTIAL pour la mission, FAIL pour le gain recherché.**
+Sur 20 cas appariés, baseline **15/20**, enhanced **9/20**, avec **3,815 fois**
+plus de tokens. Les 36 tests du moteur et les 14 tests du journal passent ; ces
+validations techniques ne compensent pas la régression de résolution.
+Le [rapport complet et ses preuves](reports/REPORT.md) conservent les résultats
+négatifs, l'audit postérieur du juge et les limites de l'évaluation.
+
 - [Architecture, contrôles et limites](docs/architecture.md)
 - [Skill d'orchestration et contrat CLI](skills/cyber-investigator/SKILL.md)
 - [Protocole de comparaison Qwen](bench/PROTOCOL.md)
@@ -17,6 +24,7 @@ Depuis la racine du dépôt, avec Python 3.11+ :
 python3 -m unittest discover -s cyber_engine/tests -v
 python3 cyber_engine/network_hooks/tests/test_network_journal.py
 python3 -m cyber_engine.bench.historical
+python3 -m cyber_engine.bench.verify_results --output /tmp/astra-replay.json
 python3 -m cyber_engine.install --profile /chemin/du/profil/config
 ```
 

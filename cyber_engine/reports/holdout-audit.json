@@ -1,0 +1,34 @@
+{
+  "status": "PARTIAL",
+  "interpretation": "Post-hoc sensitivity analysis; not the prespecified score or a new evaluation",
+  "frozen_files_verified": 44,
+  "conditions": {
+    "baseline": {
+      "correct": 18,
+      "root_causes_with_witness_and_control": 14,
+      "no_final": 1,
+      "blank_replies": 13,
+      "format_errors": 13,
+      "total_tokens": 94966
+    },
+    "enhanced": {
+      "correct": 13,
+      "root_causes_with_witness_and_control": 11,
+      "no_final": 7,
+      "blank_replies": 29,
+      "format_errors": 42,
+      "total_tokens": 362335
+    }
+  },
+  "gains": [
+    "L13"
+  ],
+  "regressions": [
+    "L04",
+    "L08",
+    "L09",
+    "L10",
+    "L11",
+    "L15"
+  ]
+}
