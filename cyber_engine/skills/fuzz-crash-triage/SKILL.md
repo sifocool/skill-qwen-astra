@@ -73,9 +73,8 @@ du fix. Distinguer crash, écriture/lecture hors limites et exploitabilité :
 aucune ne prouve automatiquement la suivante. Un résultat sans crash est
 « aucun crash observé dans ce budget », avec couverture et durée.
 
-Le [journal réseau](../../network_hooks/network-journal.md) accompagne les acquisitions
-de corpus et dépendances. Il ne mesure ni la couverture ni le trafic caché
-dans le programme fuzzé.
+Documenter l'origine des corpus et dépendances dans les preuves de mission.
+Ne pas déduire la couverture ou le trafic caché d'un simple rejeu.
 
 ## Moteur partagé V2
 

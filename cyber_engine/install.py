@@ -61,7 +61,7 @@ raise SystemExit(main())
         for file in skill.rglob('*'):
             if not file.is_file() or '__pycache__' in file.parts:continue
             dest=profile/'skills'/file.relative_to(source/'skills')
-            content=file.read_text().replace('../../network_hooks/network-journal.md','../../hooks/network-journal.md')
+            content=file.read_text()
             if dest.exists() and dest.read_text()==content:continue
             save(dest);dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text(content);installed.append(str(dest.relative_to(profile)))
     command=shlex.quote(str(Path(python).resolve()))+' '+shlex.quote(str(runtime/'hook.py'))

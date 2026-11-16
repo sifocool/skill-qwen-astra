@@ -58,13 +58,13 @@ non suivies. Exécutions : argv sans shell, environnement réduit, processus neu
 timeout du groupe de processus, CPU et fichiers de sortie limités, core dumps
 désactivés. Il n'y a pas de confinement mémoire/egress universel : `trusted_lab`
 est réservé aux fixtures contrôlées. Un binaire ou serializer hostile exige un
-bac à sable OS fourni séparément. Le journal réseau ne fournit pas ce confinement.
+bac à sable OS fourni séparément.
 
 Les preuves complètes restent dans le dossier privé 0700 / SQLite 0600. Elles
 peuvent contenir du code et des données du projet : ne pas les publier en bloc.
-Les hooks journalisent seulement l'événement et une empreinte de session. Le
-journal réseau existant conserve sa filtration et sa rotation ; l'installation
-préserve ses entrées et tous les hooks de compactage.
+Les hooks du moteur journalisent seulement l'événement et une empreinte de
+session. Le journal réseau automatique a été retiré du profil à la demande de
+l'utilisateur ; les hooks de compactage restent actifs.
 
 ## Installation et retour arrière
 

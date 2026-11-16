@@ -55,10 +55,7 @@ en remplaçant les secrets par des variables. Garder séparés faits observés,
 inférences et hypothèses. Pour chaque constat : préconditions, témoin, essai,
 résultat attendu/observé et limite de la preuve.
 
-Le journal réseau du profil se déclenche automatiquement sur les outils pris
-en charge. Lire [son contrat](../../network_hooks/network-journal.md) au premier usage :
-il trace des appels d'outils, pas les échanges réseau complets. Les preuves
-HTTP détaillées restent dans le dossier privé de mission.
+Conserver les preuves HTTP utiles dans le dossier privé de mission.
 
 ## Livraison
 

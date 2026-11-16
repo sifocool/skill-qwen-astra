@@ -68,8 +68,7 @@ Une blacklist de gadgets connus n'est pas une preuve de fermeture.
 Livrer le graphe annoté, les versions exactes, les préconditions, la preuve
 inoffensive, ses limites, le point de contrôle à corriger et les tests
 avant/après. Une chaîne ne doit pas être qualifiée RCE si seul un callback a
-été observé. Le [journal réseau](../../network_hooks/network-journal.md) trace les outils
-d'acquisition du profil ; il ne sert pas de confinement au banc.
+été observé. Les outils d'acquisition ne servent pas de confinement au banc.
 
 ## Moteur partagé V2
 

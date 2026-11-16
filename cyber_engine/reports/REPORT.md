@@ -1,5 +1,13 @@
 # Mission Astra V2 — résultat vérifié
 
+**Mise à jour du profil, 2026-11-16 :** le hook automatique « Journal réseau »
+a été retiré à la demande de l'utilisateur : ses trois entrées ont été enlevées
+de `settings.json`, puis son script et sa documentation installés ont été
+retirés. Les quatre skills ne le mentionnent plus. Les résultats et tests du
+journal ci-dessous décrivent l'état historique avant son retrait ; ils ne
+signifient pas que ce hook fonctionne encore dans le profil. Les hooks Astra et
+de compactage restent actifs. [Contrôle du retrait](network-journal-removal.json).
+
 **Statut global : PARTIAL. Objectif d'amélioration de Qwen : FAIL.**
 Le moteur est installé et ses composants exécutables sont vérifiés. La comparaison
 appariée ne montre aucun gain : le paquet évalué réduit le taux de résolution et

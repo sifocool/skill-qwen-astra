@@ -65,8 +65,7 @@ delta précis avec références source/adresses relatives ; matrice avant/après
 variantes examinées ; limites. Séparer `PROUVÉ`, `INFÉRÉ`, `NON TESTÉ`.
 Ne pas transformer une erreur mémoire en affirmation d'exécution de code.
 
-Les téléchargements et requêtes passent par le journal réseau automatique du
-profil. Lire [sa portée](../../network_hooks/network-journal.md) si du réseau est utilisé.
+Documenter les téléchargements et requêtes utiles dans les preuves de mission.
 
 ## Moteur partagé V2
 
