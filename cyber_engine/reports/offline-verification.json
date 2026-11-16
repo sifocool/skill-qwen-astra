@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "records_verified": 40,
+  "frozen_files_verified": 44,
+  "frozen_tree": "9ebea07253e78b1761c57b644735041ffc597dcd",
+  "artifact_hashes_verified": 40,
+  "judgments_reproduced": 40,
+  "qwen_called": false,
+  "interpretation": "Offline verification of recorded outcomes; no new model evaluation"
+}

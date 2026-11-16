@@ -1,0 +1,189 @@
+{
+  "status": "PARTIAL",
+  "runs": 20,
+  "successes": 19,
+  "records": [
+    {
+      "status": "PASS",
+      "label": "unclassified_crash",
+      "exit_code": -9,
+      "signature": null,
+      "stdout": "",
+      "timeout": true,
+      "unclassified_diagnostic": "",
+      "seconds": 3.291651900013676
+    },
+    {
+      "status": "PASS",
+      "label": "clean",
+      "exit_code": 0,
+      "signature": null,
+      "stdout": "",
+      "timeout": false,
+      "seconds": 0.6634370840038173
+    },
+    {
+      "status": "PASS",
+      "label": "clean",
+      "exit_code": 0,
+      "signature": null,
+      "stdout": "",
+      "timeout": false,
+      "seconds": 0.669828352984041
+    },
+    {
+      "status": "PASS",
+      "label": "clean",
+      "exit_code": 0,
+      "signature": null,
+      "stdout": "",
+      "timeout": false,
+      "seconds": 0.7104290400166065
+    },
+    {
+      "status": "PASS",
+      "label": "clean",
+      "exit_code": 0,
+      "signature": null,
+      "stdout": "",
+      "timeout": false,
+      "seconds": 1.8688561040034983
+    },
+    {
+      "status": "PASS",
+      "label": "clean",
+      "exit_code": 0,
+      "signature": null,
+      "stdout": "",
+      "timeout": false,
+      "seconds": 1.1311461109726224
+    },
+    {
+      "status": "PASS",
+      "label": "clean",
+      "exit_code": 0,
+      "signature": null,
+      "stdout": "",
+      "timeout": false,
+      "seconds": 0.9174628690234385
+    },
+    {
+      "status": "PASS",
+      "label": "clean",
+      "exit_code": 0,
+      "signature": null,
+      "stdout": "",
+      "timeout": false,
+      "seconds": 1.9564623799815308
+    },
+    {
+      "status": "PASS",
+      "label": "clean",
+      "exit_code": 0,
+      "signature": null,
+      "stdout": "",
+      "timeout": false,
+      "seconds": 1.1051322710118257
+    },
+    {
+      "status": "PASS",
+      "label": "clean",
+      "exit_code": 0,
+      "signature": null,
+      "stdout": "",
+      "timeout": false,
+      "seconds": 2.9548068269796204
+    },
+    {
+      "status": "PASS",
+      "label": "clean",
+      "exit_code": 0,
+      "signature": null,
+      "stdout": "",
+      "timeout": false,
+      "seconds": 2.02836923598079
+    },
+    {
+      "status": "PASS",
+      "label": "clean",
+      "exit_code": 0,
+      "signature": null,
+      "stdout": "",
+      "timeout": false,
+      "seconds": 1.603556910995394
+    },
+    {
+      "status": "PASS",
+      "label": "clean",
+      "exit_code": 0,
+      "signature": null,
+      "stdout": "",
+      "timeout": false,
+      "seconds": 0.9947334160096943
+    },
+    {
+      "status": "PASS",
+      "label": "clean",
+      "exit_code": 0,
+      "signature": null,
+      "stdout": "",
+      "timeout": false,
+      "seconds": 0.9766440120001789
+    },
+    {
+      "status": "PASS",
+      "label": "clean",
+      "exit_code": 0,
+      "signature": null,
+      "stdout": "",
+      "timeout": false,
+      "seconds": 0.9922139460104518
+    },
+    {
+      "status": "PASS",
+      "label": "clean",
+      "exit_code": 0,
+      "signature": null,
+      "stdout": "",
+      "timeout": false,
+      "seconds": 0.8355829399952199
+    },
+    {
+      "status": "PASS",
+      "label": "clean",
+      "exit_code": 0,
+      "signature": null,
+      "stdout": "",
+      "timeout": false,
+      "seconds": 0.6655668759776745
+    },
+    {
+      "status": "PASS",
+      "label": "clean",
+      "exit_code": 0,
+      "signature": null,
+      "stdout": "",
+      "timeout": false,
+      "seconds": 0.6678098339762073
+    },
+    {
+      "status": "PASS",
+      "label": "clean",
+      "exit_code": 0,
+      "signature": null,
+      "stdout": "",
+      "timeout": false,
+      "seconds": 0.7742781010165345
+    },
+    {
+      "status": "PASS",
+      "label": "clean",
+      "exit_code": 0,
+      "signature": null,
+      "stdout": "",
+      "timeout": false,
+      "seconds": 2.952874727983726
+    }
+  ],
+  "scope": "fresh compile and execution of empty C main each time; no claim of root cause for earlier transient"
+}

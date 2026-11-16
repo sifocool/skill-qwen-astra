@@ -1,0 +1,11 @@
+{
+  "status": "FAIL",
+  "issue": "read-only route command creates an uninitialized investigation database",
+  "exit_code": 0,
+  "created_database": true,
+  "routing_result": {
+    "reason": "visible task terms match crash|byte|length|count|index|slice|parse|integer|size",
+    "skill": "fuzz-crash-triage"
+  },
+  "planned_fix": "defer Engine creation for route/status; ignore uninitialized databases in lifecycle hooks after frozen campaign finishes"
+}

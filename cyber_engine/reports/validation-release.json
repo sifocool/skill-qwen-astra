@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "python": "3.14.6 (main, Jul 18 2026, 18:51:49) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "core_tests": 36,
+  "network_journal_tests": 14,
+  "core_skips": 0,
+  "native_tools": "radare2 and Ghidra actually exercised through installed CLI",
+  "hook_events": {
+    "UserPromptSubmit": 1,
+    "PreToolUse": 2,
+    "PostToolUseFailure": 1,
+    "PostToolUse": 1,
+    "Stop": 1
+  },
+  "preserved_failures": [
+    "tests-initial-failure.txt",
+    "tests-sandbox-denial.txt",
+    "sanitizer-cold-diagnostic.json"
+  ],
+  "limitations": [
+    "core optional-native test reports unavailable when PATH lacks tools; installed-tools.json separately validates the real bindings",
+    "original empty C launch exceeded 3-second bound; cold diagnostic reproduced one timeout in 20; OS-level cause of launch delay not isolated",
+    "new sanitizer default 10 seconds and explicit timeout label passed real defective, valid and nonterminating fixtures; no automatic retries"
+  ],
+  "files": {
+    "tests-release.txt": "90fda6bbbe982faf77c2d347a985af8a2f9a6e238e54dfa637a9673cbcec7afe",
+    "network-tests-release.txt": "a831e7103788b607108bf5acf084abf77243af7d9fb7bc5dba79f82fbcb3e4bd",
+    "hooks-live-release.json": "a53b457e6ec497aa8970a51cb6b94b06f9a41ee8a902a1cffb9d0a9a017ec5d4",
+    "installed-tools.json": "cce37e2e6ec072540e7ae2b847029d4fe29cf31e5ac85b1cc1951aa31465db15",
+    "offline-verification.json": "89409ed0f8db78277cb1847c43eba66b1807bda81b0f403b2258c0821b69c457"
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "family": "ipaddress",
+      "status": "PASS",
+      "expected_fixed": true,
+      "repeat": "3/3",
+      "result": {
+        "status": "PASS",
+        "label": "fixed",
+        "regression_ok": true,
+        "versions": [
+          [
+            {
+              "status": "PASS",
+              "label": "clean",
+              "exit_code": 0,
+              "timeout": false,
+              "stdout": "{\"label\": \"clean\", \"result\": \"10.0.0.1\"}\n",
+              "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "signature": null
+            },
+            {
+              "status": "PASS",
+              "label": "clean",
+              "exit_code": 0,
+              "timeout": false,
+              "stdout": "{\"label\": \"clean\", \"result\": \"10.0.0.1\"}\n",
+              "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "signature": null
+            }
+          ],
+          [
+            {
+              "status": "PASS",
+              "label": "clean",
+              "exit_code": 0,
+              "timeout": false,
+              "stdout": "{\"label\": \"clean\", \"result\": \"rejected\"}\n",
+              "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "signature": null
+            },
+            {
+              "status": "PASS",
+              "label": "clean",
+              "exit_code": 0,
+              "timeout": false,
+              "stdout": "{\"label\": \"clean\", \"result\": \"10.0.0.1\"}\n",
+              "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "signature": null
+            }
+          ]
+        ]
+      },
+      "snapshots": {
+        "old": "d54e5958de4b2ef036a13822b19446bc37fbf8306c225fefd02ebfff8a11f775",
+        "new": "a7a7a939af9f74613b4f278f81d3d5e1f55ec6c573825c70d902ae3c0bdd3469"
+      },
+      "limitation": "historical modules run under current Python, not full historical interpreter builds",
+      "finding": "before/after and valid control verified"
+    },
+    {
+      "family": "parse",
+      "status": "PASS",
+      "expected_fixed": true,
+      "repeat": "3/3",
+      "result": {
+        "status": "PASS",
+        "label": "fixed",
+        "regression_ok": true,
+        "versions": [
+          [
+            {
+              "status": "PASS",
+              "label": "clean",
+              "exit_code": 0,
+              "timeout": false,
+              "stdout": "{\"label\": \"clean\", \"result\": \"exa\\nmple.invalid\"}\n",
+              "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "signature": null
+            },
+            {
+              "status": "PASS",
+              "label": "clean",
+              "exit_code": 0,
+              "timeout": false,
+              "stdout": "{\"label\": \"clean\", \"result\": \"example.invalid\"}\n",
+              "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "signature": null
+            }
+          ],
+          [
+            {
+              "status": "PASS",
+              "label": "clean",
+              "exit_code": 0,
+              "timeout": false,
+              "stdout": "{\"label\": \"clean\", \"result\": \"example.invalid\"}\n",
+              "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "signature": null
+            },
+            {
+              "status": "PASS",
+              "label": "clean",
+              "exit_code": 0,
+              "timeout": false,
+              "stdout": "{\"label\": \"clean\", \"result\": \"example.invalid\"}\n",
+              "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "signature": null
+            }
+          ]
+        ]
+      },
+      "snapshots": {
+        "old": "846d2f05cbe04ba8685fb75ae66299c56bf1b2f61a14a6190d041ab459f6970e",
+        "new": "65ac502feada28fa1da0ba2877622338d1e078275afd22174fcc54797d7aacd2"
+      },
+      "limitation": "historical modules run under current Python, not full historical interpreter builds",
+      "finding": "before/after and valid control verified"
+    },
+    {
+      "family": "parse",
+      "status": "PASS",
+      "expected_fixed": false,
+      "repeat": "3/3",
+      "result": {
+        "status": "PASS",
+        "label": "not_fixed",
+        "regression_ok": false,
+        "versions": [
+          [
+            {
+              "status": "PASS",
+              "label": "clean",
+              "exit_code": 0,
+              "timeout": false,
+              "stdout": "{\"label\": \"clean\", \"result\": \"\"}\n",
+              "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "signature": null
+            },
+            {
+              "status": "PASS",
+              "label": "clean",
+              "exit_code": 0,
+              "timeout": false,
+              "stdout": "{\"label\": \"clean\", \"result\": \"https\"}\n",
+              "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "signature": null
+            }
+          ],
+          [
+            {
+              "status": "PASS",
+              "label": "clean",
+              "exit_code": 0,
+              "timeout": false,
+              "stdout": "{\"label\": \"clean\", \"result\": \"\"}\n",
+              "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "signature": null
+            },
+            {
+              "status": "PASS",
+              "label": "clean",
+              "exit_code": 0,
+              "timeout": false,
+              "stdout": "{\"label\": \"clean\", \"result\": \"https\"}\n",
+              "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "signature": null
+            }
+          ]
+        ]
+      },
+      "snapshots": {
+        "old": "846d2f05cbe04ba8685fb75ae66299c56bf1b2f61a14a6190d041ab459f6970e",
+        "new": "65ac502feada28fa1da0ba2877622338d1e078275afd22174fcc54797d7aacd2"
+      },
+      "limitation": "historical modules run under current Python, not full historical interpreter builds",
+      "finding": "initial 3.9.5 patch does not normalize scheme before parsing; retained negative result"
+    }
+  ],
+  "provenance": [
+    {
+      "name": "ipaddress-old.py",
+      "source": "Lib/ipaddress.py",
+      "commit": "1f2e3088f3c097b5bde69bbd63dfcd0852d31984",
+      "git_blob": "bc662c415b2a49f0f4066b1fd6e76d59934c9129"
+    },
+    {
+      "name": "ipaddress-new.py",
+      "source": "Lib/ipaddress.py",
+      "commit": "0a7dcbdb13f1f2ab6e76e1cff47e80fb263f5da0",
+      "git_blob": "6cb92ed55200669a6edf49eafb2df663b6bcb5a8"
+    },
+    {
+      "name": "parse-old.py",
+      "source": "Lib/urllib/parse.py",
+      "commit": "1f2e3088f3c097b5bde69bbd63dfcd0852d31984",
+      "git_blob": "335e183498d8bd5ea1c29142b54c60c36c31c09a"
+    },
+    {
+      "name": "parse-new.py",
+      "source": "Lib/urllib/parse.py",
+      "commit": "0a7dcbdb13f1f2ab6e76e1cff47e80fb263f5da0",
+      "git_blob": "c11c695a741c8aac38b82579f98072e4fce0d67f"
+    },
+    {
+      "name": "LICENSE",
+      "source": "LICENSE",
+      "commit": "0a7dcbdb13f1f2ab6e76e1cff47e80fb263f5da0",
+      "git_blob": "473861da1be7c5f24f405814ef1370de6ab946c9"
+    }
+  ]
+}

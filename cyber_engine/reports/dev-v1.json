@@ -1,0 +1,448 @@
+[
+  {
+    "case": "D01",
+    "condition": "baseline",
+    "evaluation": {
+      "correct": true,
+      "false_positive": false,
+      "root_cause_confirmed": true,
+      "reproducible": true,
+      "regression": false,
+      "witness_results": [
+        {
+          "actual": {
+            "value": true
+          },
+          "label": "violation"
+        },
+        {
+          "actual": {
+            "value": true
+          },
+          "label": "violation"
+        },
+        {
+          "actual": {
+            "value": true
+          },
+          "label": "violation"
+        }
+      ],
+      "control_result": {
+        "actual": {
+          "value": true
+        },
+        "label": "conformant"
+      },
+      "root_line_matches": true
+    },
+    "answer": {
+      "action": "final",
+      "verdict": "bug",
+      "root_cause": "Line 2 uses `or` instead of `and`, so the program grants when either authenticated or owner is true, but the contract requires both to be true (grant only when authenticated=true AND owner=true).",
+      "line": 2,
+      "witness": {
+        "authenticated": true,
+        "owner": false
+      },
+      "control": {
+        "authenticated": true,
+        "owner": true
+      },
+      "rival": "Checked that the defect is not a key-missing or type issue: with both flags true the code correctly grants (control conforms), and with authenticated=true/owner=false it wrongly grants, isolating the OR/AND operator as the cause."
+    },
+    "usage": {
+      "input_tokens": 844,
+      "output_tokens": 420
+    },
+    "seconds": 7.735801492992323,
+    "turns": 3,
+    "human_interventions": 0,
+    "error": null,
+    "instruction_sha256": "70fbf523fe20cab5c730e2260cc9cecef4ef2cafba3beb4aea4c73cbca9f2365",
+    "source_sha256": "441d92767876f484f03fbf76af5fb65ae5e10f2ddcd54191446ee4ba320db040",
+    "inclusive_input_tokens": 1356,
+    "artifact_sha256": "12d6179c0806786fe83f69cbedb49825e1324ee5327e224006896173ab06225d"
+  },
+  {
+    "case": "D01",
+    "condition": "enhanced",
+    "evaluation": {
+      "correct": true,
+      "false_positive": false,
+      "root_cause_confirmed": true,
+      "reproducible": true,
+      "regression": false,
+      "witness_results": [
+        {
+          "actual": {
+            "value": true
+          },
+          "label": "violation"
+        },
+        {
+          "actual": {
+            "value": true
+          },
+          "label": "violation"
+        },
+        {
+          "actual": {
+            "value": true
+          },
+          "label": "violation"
+        }
+      ],
+      "control_result": {
+        "actual": {
+          "value": true
+        },
+        "label": "conformant"
+      },
+      "root_line_matches": true
+    },
+    "answer": {
+      "action": "final",
+      "verdict": "bug",
+      "root_cause": "Line 2 uses 'or' instead of 'and': the function grants when either authenticated or owner is true, so an authenticated non-owner (authenticated=true, owner=false) is granted despite the contract requiring both to be true.",
+      "line": 2,
+      "witness": {
+        "authenticated": true,
+        "owner": false
+      },
+      "control": {
+        "authenticated": true,
+        "owner": true
+      },
+      "rival": "Contract could be misread as inclusive OR, but the both-true control conforms and the authenticated-only case violates the stated 'and' requirement, ruling out a contract-interpretation error."
+    },
+    "usage": {
+      "input_tokens": 4537,
+      "output_tokens": 551
+    },
+    "seconds": 15.330057543993462,
+    "turns": 4,
+    "human_interventions": 0,
+    "error": null,
+    "instruction_sha256": "66111e17abad7a9de02b8c857c551ea2330bec7a088636ad0300908ea8cac6e9",
+    "source_sha256": "441d92767876f484f03fbf76af5fb65ae5e10f2ddcd54191446ee4ba320db040",
+    "inclusive_input_tokens": 9657,
+    "artifact_sha256": "a1a6fcdb395bfc2c7fd415ff53d26f2623cc26e8bac1fe4d584af17671d624ca"
+  },
+  {
+    "case": "D02",
+    "condition": "baseline",
+    "evaluation": {
+      "correct": true,
+      "false_positive": false,
+      "root_cause_confirmed": true,
+      "reproducible": true,
+      "regression": false,
+      "witness_results": [
+        {
+          "actual": {
+            "value": false
+          },
+          "label": "violation"
+        },
+        {
+          "actual": {
+            "value": false
+          },
+          "label": "violation"
+        },
+        {
+          "actual": {
+            "value": false
+          },
+          "label": "violation"
+        }
+      ],
+      "control_result": {
+        "actual": {
+          "value": true
+        },
+        "label": "conformant"
+      },
+      "root_line_matches": true
+    },
+    "answer": {
+      "action": "final",
+      "verdict": "bug",
+      "root_cause": "Line 2 uses `len(x) < 3` which rejects lists of exactly length 3; the contract requires accepting length at most 3, so the comparison should be `len(x) <= 3`.",
+      "line": 2,
+      "witness": [
+        1,
+        2,
+        3
+      ],
+      "control": [
+        1,
+        2
+      ],
+      "rival": "The contract says 'byte length' which could mean total byte size of the integers rather than list length, but since input is a list of integers and the code uses len(x), the most direct defect is the strict inequality rejecting length-3 inputs."
+    },
+    "usage": {
+      "input_tokens": 914,
+      "output_tokens": 1162
+    },
+    "seconds": 23.863573253009235,
+    "turns": 4,
+    "human_interventions": 0,
+    "error": null,
+    "instruction_sha256": "70fbf523fe20cab5c730e2260cc9cecef4ef2cafba3beb4aea4c73cbca9f2365",
+    "source_sha256": "edf5b8b077c31375e25a798734aaaa12e88677c9835da5f0716e5f336fabfcb1",
+    "inclusive_input_tokens": 1938,
+    "artifact_sha256": "efc9a41463b31c045fb85eeae101cabb4878c2f8935e21d936c8ff4856fa002f"
+  },
+  {
+    "case": "D02",
+    "condition": "enhanced",
+    "evaluation": {
+      "correct": true,
+      "false_positive": false,
+      "root_cause_confirmed": true,
+      "reproducible": true,
+      "regression": false,
+      "witness_results": [
+        {
+          "actual": {
+            "value": false
+          },
+          "label": "violation"
+        },
+        {
+          "actual": {
+            "value": false
+          },
+          "label": "violation"
+        },
+        {
+          "actual": {
+            "value": false
+          },
+          "label": "violation"
+        }
+      ],
+      "control_result": {
+        "actual": {
+          "value": true
+        },
+        "label": "conformant"
+      },
+      "root_line_matches": true
+    },
+    "answer": {
+      "action": "final",
+      "verdict": "bug",
+      "root_cause": "Off-by-one on the boundary: contract accepts byte length at most 3 (len <= 3), but line 2 uses strict inequality len(x) < 3, so any input of length exactly 3 is wrongly rejected.",
+      "line": 2,
+      "witness": [
+        1,
+        2,
+        3
+      ],
+      "control": [
+        1,
+        2
+      ],
+      "rival": "'byte length' could mean total encoded bytes rather than list length, or the harness could misjudge; ruled out because the harness itself flagged [1,2,3] as a violation of the stated contract while the conforming control [1,2] passed, and no other interpretation makes length-3 lists invalid."
+    },
+    "usage": {
+      "input_tokens": 4830,
+      "output_tokens": 984
+    },
+    "seconds": 127.9542698879959,
+    "turns": 4,
+    "human_interventions": 0,
+    "error": null,
+    "instruction_sha256": "8f55a7a065a6b8f6c2e00a4ae75b9fdd2499de598ee774098e3e8006511abea3",
+    "source_sha256": "edf5b8b077c31375e25a798734aaaa12e88677c9835da5f0716e5f336fabfcb1",
+    "inclusive_input_tokens": 10206,
+    "artifact_sha256": "28e56f8117f606976cfac1ff183eb727c3c2522c31974e9f80d33052227c2eab"
+  },
+  {
+    "case": "D03",
+    "condition": "baseline",
+    "evaluation": {
+      "correct": true,
+      "false_positive": false,
+      "root_cause_confirmed": true,
+      "reproducible": true,
+      "regression": false,
+      "witness_results": [
+        {
+          "actual": {
+            "value": false
+          },
+          "label": "violation"
+        },
+        {
+          "actual": {
+            "value": false
+          },
+          "label": "violation"
+        },
+        {
+          "actual": {
+            "value": false
+          },
+          "label": "violation"
+        }
+      ],
+      "control_result": {
+        "actual": {
+          "value": false
+        },
+        "label": "conformant"
+      },
+      "root_line_matches": true
+    },
+    "answer": {
+      "action": "final",
+      "verdict": "bug",
+      "root_cause": "The loop only handles 'unlock' (setting locked=False) and never handles 'reset', so a reset after an unlock fails to re-set the lock; the final state is wrong.",
+      "line": 4,
+      "witness": [
+        "unlock",
+        "reset"
+      ],
+      "control": [
+        "unlock"
+      ],
+      "rival": "Could 'reset' be a no-op or invalid op? No—the contract explicitly states reset sets the lock, so ignoring it is a real defect, not a documented rejection."
+    },
+    "usage": {
+      "input_tokens": 640,
+      "output_tokens": 503
+    },
+    "seconds": 9.640075935021741,
+    "turns": 3,
+    "human_interventions": 0,
+    "error": null,
+    "instruction_sha256": "70fbf523fe20cab5c730e2260cc9cecef4ef2cafba3beb4aea4c73cbca9f2365",
+    "source_sha256": "89fcface4e37944d36a476841115b1c453c09573ae844891689ee8134c90d03e",
+    "inclusive_input_tokens": 1408,
+    "artifact_sha256": "6511a6215d87aff4f1af288d4549e7dca2719ae9a08f0d7e05786a0d22d31e41"
+  },
+  {
+    "case": "D03",
+    "condition": "enhanced",
+    "evaluation": {
+      "correct": true,
+      "false_positive": false,
+      "root_cause_confirmed": true,
+      "reproducible": true,
+      "regression": false,
+      "witness_results": [
+        {
+          "actual": {
+            "value": false
+          },
+          "label": "violation"
+        },
+        {
+          "actual": {
+            "value": false
+          },
+          "label": "violation"
+        },
+        {
+          "actual": {
+            "value": false
+          },
+          "label": "violation"
+        }
+      ],
+      "control_result": {
+        "actual": {
+          "value": false
+        },
+        "label": "conformant"
+      },
+      "root_line_matches": true
+    },
+    "answer": {
+      "action": "final",
+      "verdict": "bug",
+      "root_cause": "The operation loop only tests op=='unlock' and never handles 'reset', so a reset after an unlock fails to re-lock; the contract requires reset to set the lock before the final boolean is returned.",
+      "line": 4,
+      "witness": [
+        "unlock",
+        "reset"
+      ],
+      "control": [
+        "unlock"
+      ],
+      "rival": "reset could be an undocumented no-op ignored by the harness, but the contract explicitly states 'reset sets it', and the conforming control ['unlock'] (no reset) passes, isolating the missing reset branch as the cause."
+    },
+    "usage": {
+      "input_tokens": 4565,
+      "output_tokens": 932
+    },
+    "seconds": 20.29655472401646,
+    "turns": 4,
+    "human_interventions": 0,
+    "error": null,
+    "instruction_sha256": "66111e17abad7a9de02b8c857c551ea2330bec7a088636ad0300908ea8cac6e9",
+    "source_sha256": "89fcface4e37944d36a476841115b1c453c09573ae844891689ee8134c90d03e",
+    "inclusive_input_tokens": 9685,
+    "artifact_sha256": "81e6fd355403954d55a5b0cc7e49a39f6e7db5cf9a49635fdbb2efc2102753c0"
+  },
+  {
+    "case": "D04",
+    "condition": "baseline",
+    "evaluation": {
+      "correct": true,
+      "false_positive": false,
+      "root_cause_confirmed": false,
+      "reproducible": true,
+      "regression": false,
+      "domain_checks": 8
+    },
+    "answer": {
+      "action": "final",
+      "verdict": "clean",
+      "root_cause": "type(x) is int performs an exact type check that excludes bool (a subclass of int) and other numeric types, and 0<=x<=3 enforces the inclusive 0-3 range; all tested cases (True, False, 3, 4) conform",
+      "line": null,
+      "witness": null,
+      "control": 3,
+      "rival": "bool is a subclass of int so isinstance would wrongly accept True/False, but the code uses type(x) is int which is exact and correctly rejects booleans"
+    },
+    "usage": {
+      "input_tokens": 1684,
+      "output_tokens": 2860
+    },
+    "seconds": 55.102483022987144,
+    "turns": 6,
+    "human_interventions": 0,
+    "error": null,
+    "instruction_sha256": "70fbf523fe20cab5c730e2260cc9cecef4ef2cafba3beb4aea4c73cbca9f2365",
+    "source_sha256": "7cca81318223184368b98838033ac169845233ed447366f0354dcb1487727f2e",
+    "inclusive_input_tokens": 3220,
+    "artifact_sha256": "deca519d32cbfa5231a5404882c4526e37e8e2a2ba0e5afcea6f12e4d7bc7eea"
+  },
+  {
+    "case": "D04",
+    "condition": "enhanced",
+    "evaluation": {
+      "correct": false,
+      "false_positive": false,
+      "root_cause_confirmed": false,
+      "reproducible": false
+    },
+    "answer": {},
+    "usage": {
+      "input_tokens": 6963,
+      "output_tokens": 3684
+    },
+    "seconds": 60.38581557600992,
+    "turns": 8,
+    "human_interventions": 0,
+    "error": null,
+    "instruction_sha256": "7715b597a6a963325a8b03fe55a621e07b7e1337b722e82476282a5d78c2b70d",
+    "source_sha256": "7cca81318223184368b98838033ac169845233ed447366f0354dcb1487727f2e",
+    "inclusive_input_tokens": 21299,
+    "artifact_sha256": "825cc3731e35f569cf14f65e45bb3e0eefcc4e033333ca1c37150103e74ef34b"
+  }
+]

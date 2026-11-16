@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "date": "2026-11-16",
+  "reason": "User requested removal: the automatic network journal supplied no useful report",
+  "removed_profile_hook_calls": 3,
+  "events": ["PreToolUse", "PostToolUse", "PostToolUseFailure"],
+  "removed_installed_files": ["hooks/network_journal.py", "hooks/network-journal.md", "hooks/tests/test_network_journal.py"],
+  "deployed_runtime_excludes_network_hooks": true,
+  "source_removed_from_current_branch": true,
+  "historical_tests_retained_in_prior_commits": true,
+  "updated_installed_skills": 4,
+  "astra_and_compaction_hooks_preserved": true,
+  "old_network_tests": "historical validation only; the profile no longer runs this hook",
+  "scope": "Qwen/Claude Code installed profile; past benchmark artifacts retained"
+}

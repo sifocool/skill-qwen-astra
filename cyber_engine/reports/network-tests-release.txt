@@ -1,0 +1,19 @@
+test_concurrent_appends_and_permissions (__main__.JournalTests.test_concurrent_appends_and_permissions) ... ok
+test_failure_does_not_save_error (__main__.JournalTests.test_failure_does_not_save_error) ... ok
+test_invalid_urls_and_ipv6 (__main__.JournalTests.test_invalid_urls_and_ipv6) ... ok
+test_local_commands_and_unrelated_events_ignored (__main__.JournalTests.test_local_commands_and_unrelated_events_ignored) ... ok
+test_malformed_payload_is_nonblocking_and_private (__main__.JournalTests.test_malformed_payload_is_nonblocking_and_private) ... ok
+test_network_commands_without_literal_url (__main__.JournalTests.test_network_commands_without_literal_url) ... ok
+test_never_executes_input_or_emits_permission_decision (__main__.JournalTests.test_never_executes_input_or_emits_permission_decision) ... ok
+test_payload_cannot_choose_output_path (__main__.JournalTests.test_payload_cannot_choose_output_path) ... ok
+test_rotation_is_bounded_and_preserves_recent_records (__main__.JournalTests.test_rotation_is_bounded_and_preserves_recent_records) ... ok
+test_secret_minimization (__main__.JournalTests.test_secret_minimization) ... ok
+test_stable_correlation_and_honest_status (__main__.JournalTests.test_stable_correlation_and_honest_status) ... ok
+test_symlink_does_not_overwrite_another_file (__main__.JournalTests.test_symlink_does_not_overwrite_another_file) ... ok
+test_urls_inside_shell_headers_and_bodies_are_excluded (__main__.JournalTests.test_urls_inside_shell_headers_and_bodies_are_excluded) ... ok
+test_web_and_mcp_metadata_only (__main__.JournalTests.test_web_and_mcp_metadata_only) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 3.043s
+
+OK

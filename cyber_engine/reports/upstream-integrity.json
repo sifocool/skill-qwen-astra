@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "method": "all five upstream Git blob SHAs matched exactly after restoring a trailing newline introduced by the patch tool",
+  "files": [
+    {
+      "path": "cyber_engine/bench/vendor/cpython/parse-new.py",
+      "sha256": "65ac502feada28fa1da0ba2877622338d1e078275afd22174fcc54797d7aacd2"
+    },
+    {
+      "path": "cyber_engine/bench/vendor/cpython/provenance.json",
+      "sha256": "b0d2f29f286aa2a98d22f99f11fc72963de09cda2fd740347347a6adcd2247dd"
+    },
+    {
+      "path": "cyber_engine/bench/vendor/cpython/LICENSE",
+      "sha256": "599826df92bfdcd2702eac691072498bb096c55af04ee984cf90f70ed77b5a70"
+    },
+    {
+      "path": "cyber_engine/bench/vendor/cpython/ipaddress-new.py",
+      "sha256": "a7a7a939af9f74613b4f278f81d3d5e1f55ec6c573825c70d902ae3c0bdd3469"
+    },
+    {
+      "path": "cyber_engine/bench/vendor/cpython/parse-old.py",
+      "sha256": "846d2f05cbe04ba8685fb75ae66299c56bf1b2f61a14a6190d041ab459f6970e"
+    },
+    {
+      "path": "cyber_engine/bench/vendor/cpython/ipaddress-old.py",
+      "sha256": "d54e5958de4b2ef036a13822b19446bc37fbf8306c225fefd02ebfff8a11f775"
+    }
+  ]
+}

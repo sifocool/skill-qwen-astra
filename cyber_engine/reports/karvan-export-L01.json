@@ -1,0 +1,74 @@
+{
+  "schema": 1,
+  "source_text": "Line 3 uses 'or' instead of 'and': the role check alone grants access even when tenant != owner_tenant, so a non-matching tenant with role 'editor' is granted, violating the required conjunction (tenant match AND role exactly 'editor').\ncybersecurity investigation\nApplies only to the tested tenant and exact-role contract in local case L01.\nConclusion is limited to tested inputs and declared predictions; semantic relevance requires review.",
+  "statement": "Line 3 uses 'or' instead of 'and': the role check alone grants access even when tenant != owner_tenant, so a non-matching tenant with role 'editor' is granted, violating the required conjunction (tenant match AND role exactly 'editor').",
+  "domain": "cybersecurity investigation",
+  "applies_when": "Applies only to the tested tenant and exact-role contract in local case L01.",
+  "limits": [
+    "Conclusion is limited to tested inputs and declared predictions; semantic relevance requires review."
+  ],
+  "investigation": "a1ff574d-1272-4370-8fff-b2db3d563e43",
+  "evidence": [
+    "675fa3522ca55aeb194ac0e8181900d417b62c2e4a1d3e3e643518bb6bc46ff1",
+    "12093ba3a1e4a4ba0334adeae9c66918a76f8d79e4947abf0fa8cfcbbd898760",
+    "fe8600fa1bfb506fecaa8241d5e8d7f20309bdd83f1ef0bc223eb38b9fa898d8"
+  ],
+  "source_author": "Astra export composition; causal statement quoted verbatim from Qwen3.8-27b",
+  "karvan_status": "candidate",
+  "weights_changed": false,
+  "qwen_artifact_sha256": "d8bb7ae4f2979b77ca7104fb407502aab34b26e2f23a229110425ae10c7fd1ac",
+  "interface_test": {
+    "status": "PASS",
+    "candidate_id": "Kf435e6770c",
+    "admitted_status": "candidate",
+    "interface": "KnowledgeStore.add_source + admit",
+    "live_ledger_modified": false,
+    "draft": {
+      "applies_when": [
+        {
+          "text": "Applies only to the tested tenant and exact-role contract in local case L01.",
+          "by": "model",
+          "source": "d61fa686a7058ab414eb2e5b353642effbb14380aa33634df178dbbae7ce662b",
+          "refs": []
+        }
+      ],
+      "preconditions": [],
+      "limits": [
+        {
+          "text": "Conclusion is limited to tested inputs and declared predictions; semantic relevance requires review.",
+          "by": "model",
+          "source": "d61fa686a7058ab414eb2e5b353642effbb14380aa33634df178dbbae7ce662b",
+          "refs": []
+        }
+      ],
+      "facts": [],
+      "hypotheses": [],
+      "counterexamples": [],
+      "reverify": [],
+      "statement": {
+        "text": "Line 3 uses 'or' instead of 'and': the role check alone grants access even when tenant != owner_tenant, so a non-matching tenant with role 'editor' is granted, violating the required conjunction (tenant match AND role exactly 'editor').",
+        "by": "model",
+        "source": "d61fa686a7058ab414eb2e5b353642effbb14380aa33634df178dbbae7ce662b",
+        "refs": []
+      },
+      "domain": {
+        "text": "cybersecurity investigation",
+        "by": "model",
+        "source": "d61fa686a7058ab414eb2e5b353642effbb14380aa33634df178dbbae7ce662b",
+        "refs": []
+      },
+      "provenance": {
+        "author": "Astra export composition; causal statement quoted verbatim from Qwen3.8-27b",
+        "sources": [
+          "d61fa686a7058ab414eb2e5b353642effbb14380aa33634df178dbbae7ce662b"
+        ],
+        "episodes": [
+          {
+            "id": "a1ff574d-1272-4370-8fff-b2db3d563e43",
+            "task_id": "astra-cyber"
+          }
+        ]
+      }
+    }
+  }
+}

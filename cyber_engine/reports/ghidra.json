@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "label": "analyzed",
+  "output_sha256": "9f54f214806405cdd767cf066dd1e84affa986772ea4a1912e0596fbede2f009",
+  "archive_sha256": "63833361bea8ef5ada1bc28cd2aa2ae4ab43204d2672b595500372582152eebe",
+  "version": "10.3.3",
+  "fixture": "locally compiled Mach-O with add and main symbols",
+  "executable": "/Users/apple/astra-cyber-tools/ghidra_10.3.3_PUBLIC/support/analyzeHeadless"
+}

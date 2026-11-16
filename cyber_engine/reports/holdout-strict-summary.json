@@ -1,0 +1,39 @@
+{
+  "baseline": {
+    "cases": 20,
+    "correct": 15,
+    "false_positives": 0,
+    "root_causes_confirmed": 11,
+    "root_cause_rate": 0.7333333333333333,
+    "success_reproducibility": 1.0,
+    "human_interventions": 0,
+    "input_tokens": 55577,
+    "output_tokens": 39389,
+    "seconds": 795.4926697140909,
+    "errors": 0
+  },
+  "enhanced": {
+    "cases": 20,
+    "correct": 9,
+    "false_positives": 0,
+    "root_causes_confirmed": 7,
+    "root_cause_rate": 0.4666666666666667,
+    "success_reproducibility": 1.0,
+    "human_interventions": 0,
+    "input_tokens": 304615,
+    "output_tokens": 57720,
+    "seconds": 1234.1773536269902,
+    "errors": 0
+  },
+  "regressions": [
+    "L04",
+    "L08",
+    "L09",
+    "L10",
+    "L11",
+    "L15"
+  ],
+  "gains": [],
+  "status": "PASS",
+  "interpretation": "Local synthetic diagnosis evaluation, not CyberGym or a general security capability estimate."
+}

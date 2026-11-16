@@ -1,0 +1,179 @@
+{
+  "schema": 1,
+  "model": "qwen3.8-27b",
+  "model_server": {
+    "data": [
+      {
+        "created": 1794772088,
+        "id": "qwen3.8-27b",
+        "max_model_len": 393216,
+        "object": "model",
+        "owned_by": "ninfer"
+      }
+    ],
+    "object": "list"
+  },
+  "budgets": {
+    "turns": 8,
+    "max_output_per_turn": 1000,
+    "seconds": 600,
+    "tokens": 50000
+  },
+  "cases": [
+    {
+      "id": "L01",
+      "family": "authorization",
+      "source_sha256": "f9ef155a06fe3db25ad6ff708e096fdbda088137ba7b699abfad4a58e874ac24"
+    },
+    {
+      "id": "L02",
+      "family": "authorization",
+      "source_sha256": "06ef461089e627305ed21ee380f34c12b1041c3a4164cddabddf57012a147cc1"
+    },
+    {
+      "id": "L03",
+      "family": "authorization",
+      "source_sha256": "e41a88b0db3149d27c23a68bd67e18ac0fcdeb33dbe125a09cd11d01356c923c"
+    },
+    {
+      "id": "L04",
+      "family": "authorization",
+      "source_sha256": "8aae18f5d624430a67b47f588bbc99e7d3ed39409ba7172b4bfaf73f37ae897e"
+    },
+    {
+      "id": "L05",
+      "family": "bounds",
+      "source_sha256": "5c55f561e49ec57fb3af6f07d6b058cdd87652fa34d1f1a78ee7f5a955a1e0bd"
+    },
+    {
+      "id": "L06",
+      "family": "bounds",
+      "source_sha256": "a47b098fc01d2352f05bf20487cd1d704ea54cb7ed52b7ab4ef149b3e2d61130"
+    },
+    {
+      "id": "L07",
+      "family": "bounds",
+      "source_sha256": "e77abf60ab1ae044ee6f68c043c899400a126db44d74382a5ed0da7ef523a637"
+    },
+    {
+      "id": "L08",
+      "family": "bounds",
+      "source_sha256": "c1b3566863c2ed5caf068fd142ad3389af4ca4050f429c108581411ecb692cda"
+    },
+    {
+      "id": "L09",
+      "family": "canonicalization",
+      "source_sha256": "141c8d76f96a518bf520b8579309b97bea3540d7d0756428bc95cb18b3241efe"
+    },
+    {
+      "id": "L10",
+      "family": "canonicalization",
+      "source_sha256": "7abf6837d51996af5849678e449d9514c17492c905f46c10b1408fae832d9da4"
+    },
+    {
+      "id": "L11",
+      "family": "canonicalization",
+      "source_sha256": "ead5275d9e7c6badace01a2b29388c23875d57a95d2c802fc9cacd01df643b61"
+    },
+    {
+      "id": "L12",
+      "family": "canonicalization",
+      "source_sha256": "921bcd2d2795f2593e8242bb26ee96c5d711141cb430fe3a782467a6768a50b8"
+    },
+    {
+      "id": "L13",
+      "family": "state",
+      "source_sha256": "b12ecba0b625acc5fdf65c6926436fc4f646565e31e4a789e025d500b2d22bfd"
+    },
+    {
+      "id": "L14",
+      "family": "state",
+      "source_sha256": "ed16845479a95f18d8c8e6fe9a3ff7bfe651627802b6b0e8f635ecb96ff73f51"
+    },
+    {
+      "id": "L15",
+      "family": "state",
+      "source_sha256": "17e6f2b7166eb58d049d64d0d34d9b1b54396023da05fcc9ebf591d27e70a858"
+    },
+    {
+      "id": "L16",
+      "family": "state",
+      "source_sha256": "73d67a3d7894dc22488d917eafd2b2e2feeb42e1a9042dd496c948ef243d4062"
+    },
+    {
+      "id": "L17",
+      "family": "deserialization",
+      "source_sha256": "c525e732f1dca61d8fd2b779973980a3e3f1d46dbba53f24c9c5ae2078c45393"
+    },
+    {
+      "id": "L18",
+      "family": "deserialization",
+      "source_sha256": "f6cd0937fcaac8419645cac9deaddb3b4321224d4a025eae7269318f85f5691e"
+    },
+    {
+      "id": "L19",
+      "family": "deserialization",
+      "source_sha256": "11bd94b835438172b08e47c351b17c4ec95345882a51b1153f0636d445198856"
+    },
+    {
+      "id": "L20",
+      "family": "deserialization",
+      "source_sha256": "9f9dd82ce58fdefcf83ba8096395b8b10bb7b2319d436e5ee8d1bd3cb82d63d7"
+    }
+  ],
+  "development": false,
+  "conditions": "both",
+  "temperature": 0,
+  "protocol": "fresh API conversation and temporary fixture directory for every case and condition; alternating order",
+  "limitations": [
+    "server reports model name; model weights hash not exposed",
+    "five synthetic families",
+    "no OS sandbox needed for generated fixture-only action set"
+  ],
+  "frozen_files": {
+    "README.md": "f6a6d1382a798066c041b9b48eb731d1cc6c6703d5eb31ebd2e5192206e6b21f",
+    "__init__.py": "04f1ab10d3d7e5af67e98c30b236f51c8fb0b41275bafd5409427590614cdbbb",
+    "__main__.py": "fba4742125692c64184f6f1bcc8ef0a5ec98d7528336120138072fbbc2fd0562",
+    "adapters/__init__.py": "fadc7a3a05e275dc31edf7f403dd0560ab7e41ce2deb0d99053371f17afd0b03",
+    "adapters/dynamic.py": "f2aadcf14c5b2651d40ce7ab53a22f05fa9234eae88d15f1cf6358c6cdf024b4",
+    "adapters/limited_exec.py": "82e2c900e27f4ed1ca83b7c1f346c82fb0ff5ebf6da938ae7192cae8377c8499",
+    "adapters/protocol.py": "0a3324cbdacc4d832c0673357eb04a3dbf7651cd523feb62ea5da9b1c46dda8b",
+    "adapters/static.py": "5f04c7890c8fe58f5499abb3cd310477198e6cea24bfaefb75bc75fabb44ae90",
+    "adapters/trace_exec.py": "97c6a0ed11f4ea1655e0bed34c97d94a5091b3ba3fe0544ea41c28600f097187",
+    "bench/PROTOCOL.md": "f9fd001a3367e1b0e2f2c59a4709b59bfbd1472c72bf4feb096b8a3b01458d42",
+    "bench/cases.py": "f9937d438554268c1a41421840d4d7ed9261ecf4ead355aaf21ecce62f504c68",
+    "bench/client.py": "8889f8b95ddbcb9ee3cffe0d9cabe197d5492bdcb7f5ceb30768de4dc813994d",
+    "bench/historical.py": "7c2f96753091bea7268fd0d03c686d4457b659723016084c5c409bc0fe040b2c",
+    "bench/live_hooks.py": "2021ff0b875040a3349b9a2b1455f4013edb00eb7738cec68581e1fe29af50c1",
+    "bench/run.py": "5cf17e956e1208cf615aae46be37709ac5a7977475d31cb358a876774e34b3cc",
+    "bench/vendor/cpython/ipaddress-new.py": "a7a7a939af9f74613b4f278f81d3d5e1f55ec6c573825c70d902ae3c0bdd3469",
+    "bench/vendor/cpython/ipaddress-old.py": "d54e5958de4b2ef036a13822b19446bc37fbf8306c225fefd02ebfff8a11f775",
+    "bench/vendor/cpython/parse-new.py": "65ac502feada28fa1da0ba2877622338d1e078275afd22174fcc54797d7aacd2",
+    "bench/vendor/cpython/parse-old.py": "846d2f05cbe04ba8685fb75ae66299c56bf1b2f61a14a6190d041ab459f6970e",
+    "docs/architecture.md": "388ff9c37c9c9982419279822082e79df7703fa618552ce3e53e69aac8e6c1de",
+    "engine.py": "8e8f8026be5db7fd564981837d74acd9af0867dd321dc315f3e364edeb8fa7a8",
+    "hooks.py": "fdcc02f193c4f42090c16affcf4c03fdf9650b06f21b8fa3e4050901cc8f2062",
+    "install.py": "2caf3d6a8028a07edc8ec96fa2403244331bae4497545154372e3c35997b7950",
+    "karvan_export.py": "52487c931e28c08685ce145c1bf826de4cf3820043cbb3f6cd851d403dc4637c",
+    "network_hooks/network-journal.md": "b0235f937fd897a67eaa5d7aa8c633b7557658c7db4f6a50e8ba9be760c29dd9",
+    "network_hooks/network_journal.py": "7ec0971d2b04dec49a25a3855b908dd734728bab175f7d071c523c0fef62dd04",
+    "network_hooks/tests/test_network_journal.py": "a27634e76fbe12594b7466e1d3e44661f01a527e478fbb069b8f5ff64d743e21",
+    "scope.py": "2a9405830e3993cdc84d77c8086a61a7a57638adc0e2716c1edd07e4bedca4e1",
+    "skills/avocat-du-diable/SKILL.md": "260dee924573d920608ea90807b4085dd635eee34461d0df03d78f588ae79b1c",
+    "skills/blackbox-recon/SKILL.md": "3a4170f85a13962547eab19855c5446df902c9114ad11817f67d71d5870af85c",
+    "skills/cyber-investigator/SKILL.md": "e387b8ef0a280b1340f479b246b0a47763ba9d47ab5d0683220191b72a33a725",
+    "skills/cyber-investigator/references/engine.md": "fda0ce63037b97af784db8fd63bcced1f6e603d9d7a08fcde86b280e4421fae4",
+    "skills/fuzz-crash-triage/SKILL.md": "9d20e71abaeb80a509367c6d1e4016b9c8b62a9eeec21194777a4480f450432d",
+    "skills/gadget-deserialization/SKILL.md": "2ed5dec80820a50ec0f9434ffa72d70c6379afbc8eabb549aebbbbdf5d8066c1",
+    "skills/gadget-deserialization/references/runtime-checks.md": "54faef36f9af9343378cab1c4800ea37e2deec82a39580bf241b88438a4fc96c",
+    "skills/patch-diffing/SKILL.md": "c317c5d00a8ac79e81a3025bf68e315239e644af4bf78c0e60befaa54851135e",
+    "store.py": "990e59ddf7ab01cc83bffe90bafadce5522f0592cae0596136e108db8bf91687",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/test_adapters.py": "2fe9da478bd6d2458efc563d1eb67821bd2c4002e84f2cff2ce28376a24a6c8e",
+    "tests/test_benchmark.py": "8d3b0ed33ae0b1b84370cec28cae8c78a48f98e11e7bc3d6aeaa8d90b1679ecf",
+    "tests/test_cross_skill.py": "a1e2c1815ee6e310170e0941ec2bbc347ac6b538137dfee2ecb0e7973bd60b37",
+    "tests/test_engine.py": "9254a9633c182f9eedce2e6d2a65f6ef317ce52ea0c79020cfc9772e1d9a5756",
+    "tests/test_http.py": "7007d3acba3f5ed3ad873f548299d69f72fd30eef93bfcb79a20a4febedd23d5",
+    "tests/test_install_karvan.py": "2299a8a250cee72b01225090f804089918c884a757fe853cc67a702581e1f087"
+  }
+}

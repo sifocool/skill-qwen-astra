@@ -1,0 +1,32 @@
+{
+  "baseline": {
+    "cases": 2,
+    "correct": 1,
+    "false_positives": 0,
+    "root_causes_confirmed": 1,
+    "root_cause_rate": 1.0,
+    "success_reproducibility": 1.0,
+    "human_interventions": 0,
+    "input_tokens": 12341,
+    "output_tokens": 8831,
+    "seconds": 226.1354541059991,
+    "errors": 0
+  },
+  "enhanced": {
+    "cases": 2,
+    "correct": 1,
+    "false_positives": 0,
+    "root_causes_confirmed": 1,
+    "root_cause_rate": 1.0,
+    "success_reproducibility": 1.0,
+    "human_interventions": 0,
+    "input_tokens": 38643,
+    "output_tokens": 9641,
+    "seconds": 162.8636498139822,
+    "errors": 0
+  },
+  "regressions": [],
+  "gains": [],
+  "status": "PARTIAL",
+  "interpretation": "Separate calibration on verbatim CPython octet methods; public historical tasks excluded from unseen count; H02 exhausted response budget in both conditions."
+}

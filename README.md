@@ -1,5 +1,12 @@
 # Une méthode d'invention à transmettre à Qwen 27B
 
+Le [moteur d'investigation cybersécurité V2](cyber_engine/README.md) est développé
+dans un composant séparé : orchestration, preuves, adaptateurs et calibration
+Qwen. Son [rapport mesuré](cyber_engine/reports/REPORT.md) constate une régression
+de 15/20 à 9/20 résolutions malgré les tests logiciels réussis ; aucun gain
+cybersécurité n'est revendiqué. Les expériences d'invention ci-dessous constituent
+un travail distinct.
+
 **Révision expérimentale v2 :** un [premier essai](evaluation/pilot-2026-11-11.md)
 rapporte six réponses terminées sur huit avec le skill, contre huit sans skill
 (dont une avec une erreur de coût). La v2 allège le protocole et rend la recherche

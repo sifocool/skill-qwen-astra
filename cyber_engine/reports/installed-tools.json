@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "invocation": "installed run.py; no per-investigation tool overrides",
+  "read_only_route_created_state": false,
+  "route": {
+    "reason": "visible task terms match patch|before.?after|versions|percent|decode|hostname|canonical",
+    "skill": "patch-diffing"
+  },
+  "fixture_sha256": "97a9c815dc696792f8bba680e51b1f46199a9209854b23d7e123169ca8bcd3bc",
+  "results": {
+    "radare2": {
+      "result": {
+        "evidence": "4dbee3cb566b610c8d5e70139186de3f532c8e52835feb89b13b8ddcadc09655",
+        "info": {
+          "arch": "x86",
+          "baddr": 4294967296,
+          "binsz": 16928,
+          "bintype": "mach0",
+          "bits": 64,
+          "canary": false,
+          "cc": "",
+          "checksums": {},
+          "class": "MACH064",
+          "compiled": "",
+          "compiler": "clang",
+          "crypto": false,
+          "dbg_file": "",
+          "endian": "little",
+          "guid": "",
+          "havecode": true,
+          "injprot": false,
+          "intrp": "/usr/lib/dyld",
+          "laddr": 0,
+          "lang": "c",
+          "linenum": false,
+          "lsyms": false,
+          "machine": "x86 64 all",
+          "nx": false,
+          "os": "macos",
+          "pic": true,
+          "relocs": false,
+          "rpath": "",
+          "sanitize": false,
+          "static": false,
+          "stripped": false,
+          "subsys": "darwin",
+          "va": true
+        },
+        "label": "binary_metadata",
+        "status": "PASS"
+      },
+      "selection": {
+        "action": "run",
+        "alternatives": [],
+        "id": "E1",
+        "partition_bits": 1.0,
+        "purpose": "exercise installed native binding",
+        "score": 1.0,
+        "skill": "patch-diffing"
+      }
+    },
+    "ghidra": {
+      "result": {
+        "evidence": "3846c92cdd754dbc4dc46882b193e665c9135693915d10709c707b6cf6dd4087",
+        "label": "analyzed",
+        "output_sha256": "fcfdbb609df1b531b07cdb2c83a5bab48bea2a0e26a933fc8d4f7f54d20a0097",
+        "status": "PASS"
+      },
+      "selection": {
+        "action": "run",
+        "alternatives": [],
+        "id": "E2",
+        "partition_bits": 1.0,
+        "purpose": "exercise installed native binding",
+        "score": 1.0,
+        "skill": "patch-diffing"
+      }
+    }
+  }
+}

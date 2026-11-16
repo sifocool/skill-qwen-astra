@@ -1,0 +1,52 @@
+test_ast_alias_flow_branch_and_safe_control (test_adapters.AdapterTests.test_ast_alias_flow_branch_and_safe_control) ... ok
+test_binary_elf_pe_macho_and_malformed (test_adapters.AdapterTests.test_binary_elf_pe_macho_and_malformed) ... ok
+test_compare_regression_control (test_adapters.AdapterTests.test_compare_regression_control) ... ok
+test_dependencies_ast_and_lock (test_adapters.AdapterTests.test_dependencies_ast_and_lock) ... ok
+test_deserialization_actual_harmless_callback (test_adapters.AdapterTests.test_deserialization_actual_harmless_callback) ... ok
+test_dynamic_timeout_and_environment (test_adapters.AdapterTests.test_dynamic_timeout_and_environment) ... ok
+test_optional_reverse_tools_have_real_smoke_tests (test_adapters.AdapterTests.test_optional_reverse_tools_have_real_smoke_tests) ... ok
+test_protocol_role_and_state_violation (test_adapters.AdapterTests.test_protocol_role_and_state_violation) ... ok
+test_real_sanitizer_on_local_c_fixture (test_adapters.AdapterTests.test_real_sanitizer_on_local_c_fixture) ... FAIL
+test_replay_fuzz_minimize_functionally (test_adapters.AdapterTests.test_replay_fuzz_minimize_functionally) ... ok
+test_semantic_diff_ignores_whitespace_not_constants (test_adapters.AdapterTests.test_semantic_diff_ignores_whitespace_not_constants) ... ok
+test_all_ground_truth_witnesses_and_controls (test_benchmark.BenchmarkTests.test_all_ground_truth_witnesses_and_controls) ... ok
+test_judge_does_not_accept_claim_without_witness_or_correct_line (test_benchmark.BenchmarkTests.test_judge_does_not_accept_claim_without_witness_or_correct_line) ... ok
+test_no_oracle_or_witness_in_instructions (test_benchmark.BenchmarkTests.test_no_oracle_or_witness_in_instructions) ... ok
+test_one_investigation_four_skills_shared_evidence (test_cross_skill.CrossSkillTests.test_one_investigation_four_skills_shared_evidence) ... ok
+test_cli_and_hook_subprocess_contract (test_engine.EngineTests.test_cli_and_hook_subprocess_contract) ... ok
+test_cli_read_only_actions_do_not_create_state (test_engine.EngineTests.test_cli_read_only_actions_do_not_create_state) ... ok
+test_evidence_tampering_detected (test_engine.EngineTests.test_evidence_tampering_detected) ... ok
+test_hook_events_no_tool_denial_and_completion_gate (test_engine.EngineTests.test_hook_events_no_tool_denial_and_completion_gate) ... ok
+test_hook_recorder_on_validated_conclusion (test_engine.EngineTests.test_hook_recorder_on_validated_conclusion) ... ok
+test_initial_routing_uses_only_visible_question (test_engine.EngineTests.test_initial_routing_uses_only_visible_question) ... ok
+test_input_change_invalidation (test_engine.EngineTests.test_input_change_invalidation) ... ok
+test_missing_prediction_cannot_inflate_information (test_engine.EngineTests.test_missing_prediction_cannot_inflate_information) ... ok
+test_no_claim_without_proof_and_no_fake_rejection (test_engine.EngineTests.test_no_claim_without_proof_and_no_fake_rejection) ... ok
+test_partial_stop_accepts_explicit_limit_without_loop (test_engine.EngineTests.test_partial_stop_accepts_explicit_limit_without_loop) ... ok
+test_regression_guard_requires_actual_comparison (test_engine.EngineTests.test_regression_guard_requires_actual_comparison) ... ok
+test_rejected_input_and_symlink_escape (test_engine.EngineTests.test_rejected_input_and_symlink_escape) ... ok
+test_selector_information_per_cost_dedup_and_stop (test_engine.EngineTests.test_selector_information_per_cost_dedup_and_stop) ... ok
+test_shared_evidence_routing_and_confirmation (test_engine.EngineTests.test_shared_evidence_routing_and_confirmation) ... ok
+test_uninitialized_database_does_not_activate_hook (test_engine.EngineTests.test_uninitialized_database_does_not_activate_hook) ... ok
+test_unrelated_hook_does_nothing (test_engine.EngineTests.test_unrelated_hook_does_nothing) ... ok
+test_actual_request_origin_and_redirect_boundary (test_http.HTTPTests.test_actual_request_origin_and_redirect_boundary) ... ok
+test_preserves_settings_hooks_idempotent_and_installed_execution (test_install_karvan.InstallTests.test_preserves_settings_hooks_idempotent_and_installed_execution) ... ok
+test_tool_bindings_preserved_and_read_only_launcher_has_no_state (test_install_karvan.InstallTests.test_tool_bindings_preserved_and_read_only_launcher_has_no_state) ... ok
+test_actual_karvan_interface_in_disposable_ledger (test_install_karvan.KarvanTests.test_actual_karvan_interface_in_disposable_ledger) ... ok
+
+======================================================================
+FAIL: test_real_sanitizer_on_local_c_fixture (test_adapters.AdapterTests.test_real_sanitizer_on_local_c_fixture)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/apple/astra-cyber-engine-v2/cyber_engine/tests/test_adapters.py", line 79, in test_real_sanitizer_on_local_c_fixture
+    self.assertEqual(self.call('sanitizer',path=p)['label'],'clean')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'unclassified_crash' != 'clean'
+- unclassified_crash
++ clean
+
+
+----------------------------------------------------------------------
+Ran 35 tests in 55.022s
+
+FAILED (failures=1)
