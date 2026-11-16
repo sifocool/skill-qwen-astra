@@ -22,7 +22,6 @@ Depuis la racine du dépôt, avec Python 3.11+ :
 
 ```sh
 python3 -m unittest discover -s cyber_engine/tests -v
-python3 cyber_engine/network_hooks/tests/test_network_journal.py
 python3 -m cyber_engine.bench.historical
 python3 -m cyber_engine.bench.verify_results --output /tmp/astra-replay.json
 python3 -m cyber_engine.install --profile /chemin/du/profil/config

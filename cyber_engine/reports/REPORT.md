@@ -1,9 +1,11 @@
 # Mission Astra V2 — résultat vérifié
 
-**Mise à jour du profil, 2026-11-16 :** le hook automatique « Journal réseau »
+**Mise à jour, 2026-11-16 :** le hook automatique « Journal réseau »
 a été retiré à la demande de l'utilisateur : ses trois entrées ont été enlevées
 de `settings.json`, puis son script et sa documentation installés ont été
-retirés. Le runtime installé n'embarque plus le composant inactif. Les quatre
+retirés. Son code source a également été supprimé de la branche courante. Les
+anciens commits conservent les preuves de la campagne. Le runtime installé
+n'embarque plus le composant inactif. Les quatre
 skills ne le mentionnent plus. Les résultats et tests du
 journal ci-dessous décrivent l'état historique avant son retrait ; ils ne
 signifient pas que ce hook fonctionne encore dans le profil. Les hooks Astra et
@@ -175,7 +177,6 @@ Depuis un clone avec l'historique Git :
 
 ```sh
 python3 -m unittest discover -s cyber_engine/tests -v
-python3 cyber_engine/network_hooks/tests/test_network_journal.py
 python3 -m cyber_engine.bench.verify_results --output /tmp/astra-replay.json
 python3 -m cyber_engine.bench.historical
 ```

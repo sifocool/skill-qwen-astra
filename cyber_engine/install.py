@@ -41,7 +41,7 @@ def install(profile,python=sys.executable,tools=None):
     save(settings)
     stage=profile/('.astra-runtime-'+uuid.uuid4().hex)
     stage.mkdir(mode=0o700)
-    shutil.copytree(source,stage/'cyber_engine',ignore=shutil.ignore_patterns('__pycache__','reports','network_hooks'))
+    shutil.copytree(source,stage/'cyber_engine',ignore=shutil.ignore_patterns('__pycache__','reports'))
     (stage/'toolchain.json').write_text(json.dumps(tools,indent=2))
     (stage/'run.py').write_text('''import json,os
 from pathlib import Path
